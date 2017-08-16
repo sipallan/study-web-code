@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+body,h1,ul{
+	margin:0;
+	padding:0;
+}
+
+#nav{
+	background-color: darkgrey;
+	height:70px;
+	width:100%;
+	/*最底层容器，需要自适应宽度*/
+}
+
+#nav > section{
+	width:1000px;
+	height:70px;
+	margin:0 auto;
+	/*装logo和导航的容器，垂直居中*/
+}
+
+#nav > section > h1{
+	height:70px;
+	width:256px;
+	margin:0;
+	background-image:url(../img/logo.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	float: left;
+	/*h1是logo，脱离文档流和底部容器nav同基准*/
+}
+
+#nav > section > ul{
+	height:70px;
+	width:400px;
+	list-style: outside none none;
+	/*去掉序号符号*/
+	/*background-color: red;*/
+	float: left;
+	/*脱离文档流和h1同一基准*/
+	margin-left:220px;
+}
+
+#nav > section > ul > li{
+	/*background-color:red ;*/
+    float:left;
+	height:70px;
+	width:80px;
+	line-height: 70px;
+	/*行高=容器高度=居中*/
+}
+
+#nav > section > ul > li > a{
+	text-decoration: none;
+	color:white;
+	/*background-color: red;*/
+	height:70px;
+	display: block;
+	margin:0 1px;
+	text-align: center;
+	font-style: normal;
+}	
+
+#nav > section > ul > li > a:hover{
+	  background-color: gray;
+	}
+
+
