@@ -6,20 +6,24 @@ body,h1,ul{
 }
 
 #nav{
-	background-color: darkgrey;
+	background-color: whitesmoke;
 	height:70px;
 	width:100%;
+	min-width: 1000px;
+	box-shadow: 3px 3px 5px gray ;
+	position: relative;
+	z-index: 9999;
 	/*最底层容器，需要自适应宽度*/
 }
 
-#nav > section{
+#nav .center{
 	width:1000px;
 	height:70px;
 	margin:0 auto;
 	/*装logo和导航的容器，垂直居中*/
 }
 
-#nav > section > h1{
+#nav .logo{
 	height:70px;
 	width:256px;
 	margin:0;
@@ -39,6 +43,8 @@ body,h1,ul{
 	float: left;
 	/*脱离文档流和h1同一基准*/
 	margin-left:220px;
+	font-weight: bold;
+	font-family: "microsoft yahei";
 }
 
 #nav > section > ul > li{
@@ -52,7 +58,7 @@ body,h1,ul{
 
 #nav > section > ul > li > a{
 	text-decoration: none;
-	color:white;
+	color:black;
 	/*background-color: red;*/
 	height:70px;
 	display: block;
@@ -62,8 +68,62 @@ body,h1,ul{
 }	
 
 #nav > section > ul > li > a:hover{
-	  background-color: gray;
-          font-size:17px;
+	  background-color: gainsboro;
+	  font-size: 16.5px;
 	}
 
+#searchbg{
+	width:100%;
+	min-width: 1000px;
+	height:600px;
+	background: url(../img/searchbg.png) no-repeat;
+	background-position: top center;	
+	position: relative;
+}
+
+#searchbg .content{
+	width:600px;
+	height:60px;
+	background-color: #000;
+	position: absolute;
+	left:50%;
+	top:45%;
+	/*margin-left:-300px;*/
+	margin:0 0 -50px -300px;
+	opacity: 0.6;
+	border-radius: 10px;;
+}
+
+#searchbg .search{
+	width: 450px;
+	height: 48px;
+	position: absolute;
+	left:50%;
+	top:45.5%;
+	margin-left:-298px;
+	border-radius: 10px;
+	padding:0 10px;
+	font-size: 24px;
+	outline: none;
+}
+
+#searchbg .button{
+	width: 120px;
+	height: 50px;
+	position: absolute;
+	left:50%;
+	top:45.7%;
+	border-radius: 10px;
+	font-size: 22px;
+	margin-left:178px;
+	background-color: deepskyblue;
+	cursor:pointer;
+	outline: none;
+	box-shadow: none;
+	border:0px;
+	color:white
+}
+#searchbg .button:hover{
+	background-color: dodgerblue;
+}
 
