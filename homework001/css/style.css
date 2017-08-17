@@ -161,6 +161,7 @@ body,h1,ul,section,div,h2,p{
 	display: inline-block;
 	margin:10px 10px;
 	border-radius: 5px;
+	position: relative;
 }
 #food .food1 img{
 	vertical-align: middle;
@@ -191,3 +192,13 @@ body,h1,ul,section,div,h2,p{
 	color:#777;
 }
 
+#food .type p{
+	background-color: green;
+	width:80px;
+	color:white;
+	font-family: "微软雅黑";
+	text-align: center;
+	position: absolute;
+	left:0px;
+	top:0px;
+}
