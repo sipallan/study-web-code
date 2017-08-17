@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-body,h1,ul{
+body,h1,ul,section,div,h2,p{
 	margin:0;
 	padding:0;
 }
 
 #nav{
-	background-color: whitesmoke;
+	background-color: #ffffff;
 	height:70px;
 	width:100%;
 	min-width: 1000px;
@@ -36,13 +36,13 @@ body,h1,ul{
 
 #nav > section > ul{
 	height:70px;
-	width:400px;
+	width:500px;
 	list-style: outside none none;
 	/*去掉序号符号*/
 	/*background-color: red;*/
 	float: left;
 	/*脱离文档流和h1同一基准*/
-	margin-left:220px;
+	margin-left:150px;
 	font-weight: bold;
 	font-family: "microsoft yahei";
 }
@@ -53,12 +53,13 @@ body,h1,ul{
 	height:70px;
 	width:80px;
 	line-height: 70px;
+	margin-left:5px;
 	/*行高=容器高度=居中*/
 }
 
 #nav > section > ul > li > a{
 	text-decoration: none;
-	color:black;
+	color:#ffc501;
 	/*background-color: red;*/
 	height:70px;
 	display: block;
@@ -68,7 +69,7 @@ body,h1,ul{
 }	
 
 #nav > section > ul > li > a:hover{
-	  background-color: gainsboro;
+	  background-color: #fefbfb;
 	  font-size: 16.5px;
 	}
 
@@ -125,5 +126,68 @@ body,h1,ul{
 }
 #searchbg .button:hover{
 	background-color: dodgerblue;
+}
+
+#food{
+	width:1000px;
+	height:1200px;
+	/*background-color: red;*/
+	margin:30px auto;
+	text-align: center;
+}
+
+#food .title{
+	/*background-color: red;*/
+	text-align: center;
+	font-family: "microsoft yahei";
+}
+#food .title h2{
+	font-size:45px;
+	color:#666;
+	margin:15px;
+}
+#food .title p{
+	color:#666;
+	margin:5px 0;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+#food .food1{
+	text-align: left;
+	/*background-color: red;*/
+	border:solid 1px #ddd;
+	width:300px;
+	display: inline-block;
+	margin:10px 10px;
+	border-radius: 5px;
+}
+#food .food1 img{
+	vertical-align: middle;
+	/*这里不知道为什么,可能和inline-block有关*/
+}
+#food .food1 figcaption{
+	font-size:15px;
+	color:#777;
+	letter-spacing: 5px;
+	margin-left:7px;
+	line-height: 1.5;
+}
+#food .price{
+	position: relative;
+}
+
+#food .price span{
+	font-size:30px;
+	color:#ff318c;
+	font-family: "微软雅黑";
+	padding-left:5px;
+}
+#food .price strong{
+	position: absolute;
+	right:5px;
+	bottom:5px;
+	font-size:15px;
+	color:#777;
 }
 
