@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+#headline{
+	width:100%;
+	min-width:1000px;
+	height:300px;
+	background:url(../img/informationbg.jpg) no-repeat;
+	background-position: top center;
+	position: relative;
+}
+
+#headline hgroup{
+	width:1000px;
+	/*height:300px;*/
+	margin:0 auto;
+	color:white;
+	font-family: "microsoft yahei";
+	padding:100px 0 0 100px;
+	position: absolute
+	/*background-color: red;*/
+}
+
+#headline h2{
+	font-size:40px;
+}
+
+#headline .shade{
+	height:600px;
+	width:100%;
+	min-width:1000px;
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+}
+/*李老师使用渐变 不太熟悉 另外开一个页面专门做渐变 这里用遮罩透明度*/

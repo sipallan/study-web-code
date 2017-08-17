@@ -1,0 +1,134 @@
+@charset "utf-8";
+
+body,h1,ul,section,div,h2,p,li{
+	margin:0;
+	padding:0;
+}
+
+#nav{
+	background-color: #ffffff;
+	height:70px;
+	width:100%;
+	min-width: 1000px;
+	box-shadow: 3px 3px 5px gray ;
+	position: relative;
+	z-index: 9999;
+	/*最底层容器，需要自适应宽度*/
+}
+
+#nav .center{
+	width:1000px;
+	height:70px;
+	margin:0 auto;
+	/*装logo和导航的容器，垂直居中*/
+}
+
+#nav .logo{
+	height:70px;
+	width:256px;
+	margin:0;
+	background-image:url(../img/logo.png);
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	float: left;
+	/*h1是logo，脱离文档流和底部容器nav同基准*/
+}
+
+#nav > section > ul{
+	height:70px;
+	width:500px;
+	list-style: outside none none;
+	/*去掉序号符号*/
+	/*background-color: red;*/
+	float: left;
+	/*脱离文档流和h1同一基准*/
+	margin-left:150px;
+	font-style:normal;
+	font-family: "microsoft yahei";
+}
+
+#nav > section > ul > li{
+	/*background-color:red ;*/
+    float:left;
+	height:65px;
+	margin-top:2.5px;
+	width:80px;
+	line-height: 70px;
+	margin-left:5px;
+	/*行高=容器高度=居中*/
+}
+
+#nav > section > ul > li > a{
+	text-decoration: none;
+	color:#000000;
+	/*background-color: red;*/
+	height:65px;
+	display: block;
+	margin:0 1px;
+	text-align: center;
+	font-style: normal;
+}	
+
+#nav > section > ul > li > a:hover{
+	  background-color:#fdc311;
+	 /* font-size: 16.5px;*/
+	}
+
+#nav .active{
+	background-color: #fdc311;
+}
+#footer{
+	height:360px;
+	width:100%;
+	min-width:1000px;
+	background-color: #222;
+	text-align: center;
+	margin-top:0;
+}
+#footer .top{
+	height:280px;
+	width:1000px;
+	min-width:1000px;
+	margin:0 auto;
+}
+
+#footer .bottom{
+	height:80px;
+	background-color: #333;
+}
+#footer .bottom span{
+	color:white;
+	font-size: 14px;
+	line-height: 80px;
+	font-family: "microsoft yahei";
+}
+
+#footer .top .detail{
+	width:300px;
+	height:190px;
+	/*background-color: #fff;*/
+	display: inline-block;
+	margin:50px 10px 30px 10px;
+}
+#footer .top .detail ul{
+	list-style: outside none none;
+	display: inline;
+	font-family: "微软雅黑";
+}
+#footer .top .detail p{
+	color:#777;
+	font-size: 24px;
+	margin-bottom:10px;
+}
+
+#footer .top .detail li{
+	color:#777;
+	font-size: 16px;
+	padding:3px 0;
+	text-align: center;
+}
+
+#footer .top .detail hr{
+	width:80%;
+	border:1px solid #777;
+	}
