@@ -130,7 +130,7 @@ body,h1,ul,section,div,h2,p,li{
 
 #food{
 	width:1000px;
-	height:930px;
+	height:900px;
 	/*background-color: red;*/
 	margin:30px auto;
 	text-align: center;
@@ -207,6 +207,7 @@ body,h1,ul,section,div,h2,p,li{
 	width:100%;
 	background-color: #222;
 	text-align: center;
+	margin-top:0;
 }
 #footer .top{
 	height:280px;
