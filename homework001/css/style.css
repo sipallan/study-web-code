@@ -43,14 +43,15 @@ body,h1,ul,section,div,h2,p,li{
 	float: left;
 	/*脱离文档流和h1同一基准*/
 	margin-left:150px;
-	font-weight: bold;
+	font-style:normal;
 	font-family: "microsoft yahei";
 }
 
 #nav > section > ul > li{
 	/*background-color:red ;*/
     float:left;
-	height:70px;
+	height:65px;
+	margin-top:2.5px;
 	width:80px;
 	line-height: 70px;
 	margin-left:5px;
@@ -61,7 +62,7 @@ body,h1,ul,section,div,h2,p,li{
 	text-decoration: none;
 	color:#000000;
 	/*background-color: red;*/
-	height:70px;
+	height:65px;
 	display: block;
 	margin:0 1px;
 	text-align: center;
@@ -69,10 +70,13 @@ body,h1,ul,section,div,h2,p,li{
 }	
 
 #nav > section > ul > li > a:hover{
-	  background-color: #fefbfb;
-	  font-size: 16.5px;
+	  background-color:#fdc311;
+	 /* font-size: 16.5px;*/
 	}
 
+#nav .active{
+	background-color: #fdc311;
+}
 #searchbg{
 	width:100%;
 	min-width: 1000px;
@@ -205,6 +209,7 @@ body,h1,ul,section,div,h2,p,li{
 #footer{
 	height:360px;
 	width:100%;
+	min-width:1000px;
 	background-color: #222;
 	text-align: center;
 	margin-top:0;
