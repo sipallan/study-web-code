@@ -1,8 +1,12 @@
 @charset "utf-8";
 
-body,h1,ul,section,div,h2,p,li{
+body,h1,ul,section,div,h2,p,li,img{
 	margin:0;
 	padding:0;
+}
+
+a{
+	text-decoration: none;
 }
 
 #nav{
@@ -70,12 +74,12 @@ body,h1,ul,section,div,h2,p,li{
 }	
 
 #nav > section > ul > li > a:hover{
-	  background-color:#fdc311;
+	  background-color:#f9f8f6;
 	 /* font-size: 16.5px;*/
 	}
 
 #nav .active{
-	background-color: #fdc311;
+	background-color: #f9f8f6;
 }
 #footer{
 	height:360px;
@@ -132,3 +136,18 @@ body,h1,ul,section,div,h2,p,li{
 	width:80%;
 	border:1px solid #777;
 	}
+
+
+#footer .top a:link{
+	color:#777;
+}
+#footer .top a:visited{
+	color:#777;
+}
+#footer .top a:hover{
+	color:#fdc311;
+}
+#footer .top a:active{
+	color:#fdc311;
+}
+/*注意顺序是LVHA*/

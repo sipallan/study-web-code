@@ -25,7 +25,7 @@
 }
 
 #headline .shade{
-	height:600px;
+	height:300px;
 	width:100%;
 	min-width:1000px;
 	background-color: #000;
@@ -33,3 +33,129 @@
 	position: absolute;
 }
 /*李老师使用渐变 不太熟悉 另外开一个页面专门做渐变 这里用遮罩透明度*/
+
+#container{
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+	/*background-color: #fff;*/
+}
+
+#container .container-main{
+	width:700px;
+	background-color: grey;
+	box-sizing: border-box;
+}
+
+#container .sidebar{
+	width:300px;
+	/*background-color: red;*/
+	float:right;
+	text-align: center;
+}
+
+#container .sidebox{
+	font-size:12px;
+	font-weight: normal;
+	text-align: left;
+	/*text-indent: 9px;*/
+	margin:5px 10px 5px 10px;
+	border:1px solid #999;
+	
+}
+
+#container h2{
+	font-family: "microsoft yahei";
+	margin:15px 0;
+	text-indent: 8px;
+	text-align: left;
+}
+
+#container .tags{
+	font-size: 14px;
+	text-align: left;
+	margin:0 0 10px 5px;
+}
+
+#container .tags a{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	line-height: 30px;
+	background-color: #f9f8f6;
+	display: inline-block;
+	margin:3px;
+	text-align: center;
+	
+}
+
+#container .tags a:link{
+	color:black;
+}
+
+#container .tags a:visited{
+	color:black;
+}
+
+#container .tags a:hover{
+	color:#f9cb06;
+}
+
+#container .hot-img{
+	width:120px;
+	margin:0;
+	padding:0 5px 10px 5px;
+	text-align: text;
+	display: inline-block;
+}
+
+#container img{
+	/*border: 1px solid #999;*/
+}
+
+#container figcaption{
+	width:130px;
+	text-align: center;
+	font-family: "microsoft yahei";
+	font-size: 12px;
+	margin:10px 0 5px 0;
+}
+
+#container .box{
+	text-align: left;
+	font-size: 13px;
+}
+
+#container .box span{
+	width: 123px;
+	height:30px;
+	line-height: 30px;
+	background-color: #f9f8f6;
+	display: inline-block;
+	margin-left:8px;
+	font-family: "microsoft yahei";
+	text-align: left;
+	margin:0 0 10px 10px;
+}
+
+#container img{
+	/*margin-top:5px;*/
+	 vertical-align: middle;
+}
+
+#container a{
+	/*padding-bottom:5px;*/
+	/*display: inline-block;*/
+}
+
+#container .box a:link{
+	color:black;
+}
+
+#container .box a:visited{
+	color:black;
+}
+
+#container .box a:hover{
+	color:#f9cb06;
+}
