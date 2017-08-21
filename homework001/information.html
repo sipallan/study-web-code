@@ -7,16 +7,16 @@
 		<link rel="stylesheet" href="css/base.css" />
 	</head>
 	<body>
-		<!--导航部分-->
+	<!--导航部分-->
 		<nav id="nav">
-			<section class="center">
+			<section class="nav-main">
 				<h1 class="logo">博客小站</h1>
-				<ul>
+				<ul class="navgation">
 					<li>
-						<a href="index.html">首&nbsp&nbsp页</a>
+						<a class="active" href="###">首&nbsp&nbsp页</a>
 					</li>
 					<li>
-						<a class="active" href="information.html">热门美食</a>
+						<a href="information.html">热门美食</a>
 					</li>
 					<li>
 						<a href="###">特价电影</a>
@@ -238,24 +238,53 @@
 							</article>
 						</figcaption>
 					</figure>
+					<figure class="food">
+						<img src="img/food1.png" alt="" />
+						<figcaption class="food-container">
+							<article class="info-food">
+								<header>
+								<h2><港阿姨>单人自助港式早餐</h2>
+								<h3><港阿姨>单人自助港式早餐，免费停车，免费wifi，节假日通用</h3>
+								<h3><span>福利</span>免费停车,免费wifi</h3>
+								<h3><span>赠品</span>送2元豆浆一份</h3>
+								</header>
+								<!--<footer>
+								本次服务由港阿姨提供，截止日期：2017年3月3日
+								</footer>-->
+								<div class="buy">
+									<div class="price">¥48</div>
+									<div class="reserve"><a href="###">立即抢购</a></div>
+								</div>
+								<div class="tags">
+									<div>今日促销</div>
+								</div>
+								<div class="disc">
+									<span>5.5折</span>
+								</div>
+							</article>
+						</figcaption>
+					</figure>
+					<div class="more">
+						<p><a href="###" alt="">加载更多...</a></p>
+					</div>
 				</div>
 			</div>
 		</div>
 		
 		<!--底部部分-->
-		<footer id="footer">
-			<div class="top">
-				<div class="detail left">
+			<footer id="footer">
+			<div class="footer-main">
+				<div class="footer-common footer-left">
 				<ul>
 					<p>合作伙伴</p>
 					<hr />
-					<li>美团网-美团外卖优惠券</li>
-					<li>大众点评-要吃最好的</li>
+					<li><a href="http://www.meituan.com/">美团网-美团外卖优惠券</a></li>
+					<li><a href="https://www.dianping.com/fuzhou">大众点评-要吃最好的</a></li>
 					<li>饿了么-工作点餐利器</li>
 					<li>百度外卖-30分钟送达</li>
 				</ul>
 				</div>
-				<div class="detail middle">
+				<div class="footer-common footer-middle">
 					<ul>
 					<p>常见问题</p>
 					<hr />
@@ -265,7 +294,7 @@
 					<li>付款失败怎么办？</li>
 				</ul>
 				</div>
-				<div class="detail right">
+				<div class="footer-common footer-right">
 					<ul>
 					<p>联系方式</p>
 					<hr />
@@ -276,9 +305,9 @@
 				</ul>
 				</div>
 			</div>
-			<div class="bottom">
+			<div class="footer-bottom">
 				<span>©2017 meiniangcufang.com  京ICP证030100号  京公网安备11010802014100号  
-</span>
+			</span>
 			</div>
 		</footer>
 	</body>

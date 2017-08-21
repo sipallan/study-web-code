@@ -36,7 +36,7 @@
 
 #container{
 	width:1000px;
-	height:1000px;
+	/*height:1000px;*/
 	margin:0 auto;
 	/*background-color: #fff;*/
 }
@@ -228,15 +228,14 @@
 
 #container .infor-container{
 	width:698px;
-	height:180px;
+	/*height:180px;*/
 	/*background-color:grey;*/
-	margin-top:5px;
 }
 
 .infor-container .food{
 	/*background-color: red;*/
 	width:698px;
-	height:180px;
+	/*height:180px;*/
 	margin:5px 10px 0 0px;
 	border:1px solid #eee;
 	position: relative;
@@ -325,4 +324,20 @@
 	margin:5px 0 0 8px;
 	/*只对block有用*/
 }
-	
+
+.more{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	/*background-color: #eee;*/
+	margin-top:25px;
+	text-align:center;
+	margin:20px auto;
+	border:1px solid #eee;
+	padding:0;
+	cursor: pointer;
+}
+
+.more a{
+	display: block;
+}

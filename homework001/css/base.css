@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/*清除浏览器默认格式，规定全局格式*/
 body,h1,ul,section,div,h2,p,li,img{
 	margin:0;
 	padding:0;
@@ -10,6 +10,7 @@ a{
 	text-decoration: none;
 }
 
+/*头部*/
 #nav{
 	background-color: #ffffff;
 	height:70px;
@@ -21,7 +22,7 @@ a{
 	/*最底层容器，需要自适应宽度*/
 }
 
-#nav .center{
+#nav .nav-main{
 	width:1000px;
 	height:70px;
 	margin:0 auto;
@@ -39,7 +40,7 @@ a{
 	/*h1是logo，脱离文档流和底部容器nav同基准*/
 }
 
-#nav > section > ul{
+#nav .navgation{
 	height:70px;
 	width:500px;
 	list-style: outside none none;
@@ -52,7 +53,7 @@ a{
 	font-family: "microsoft yahei";
 }
 
-#nav > section > ul > li{
+#nav .navgation li{
 	/*background-color:red ;*/
     float:left;
 	height:65px;
@@ -63,7 +64,7 @@ a{
 	/*行高=容器高度=居中*/
 }
 
-#nav > section > ul > li > a{
+#nav .navgation a{
 	text-decoration: none;
 	color:#000000;
 	/*background-color: red;*/
@@ -74,7 +75,7 @@ a{
 	font-style: normal;
 }	
 
-#nav > section > ul > li > a:hover{
+#nav .navgation a:hover{
 	  background-color:#f9f8f6;
 	 /* font-size: 16.5px;*/
 	}
@@ -82,73 +83,71 @@ a{
 #nav .active{
 	background-color: #f9f8f6;
 }
+
+/*底部*/
+
 #footer{
 	height:360px;
 	width:100%;
 	min-width:1000px;
 	background-color: #222;
 	text-align: center;
-	margin-top:0;
 }
-#footer .top{
+#footer .footer-main{
 	height:280px;
 	width:1000px;
 	min-width:1000px;
 	margin:0 auto;
 }
-
-#footer .bottom{
-	height:80px;
-	background-color: #333;
-}
-#footer .bottom span{
-	color:white;
-	font-size: 14px;
-	line-height: 80px;
-	font-family: "microsoft yahei";
-}
-
-#footer .top .detail{
+#footer .footer-main .footer-common{
 	width:300px;
 	height:190px;
 	/*background-color: #fff;*/
 	display: inline-block;
 	margin:50px 10px 30px 10px;
 }
-#footer .top .detail ul{
+#footer .footer-main ul{
 	list-style: outside none none;
 	display: inline;
 	font-family: "微软雅黑";
 }
-#footer .top .detail p{
+#footer .footer-main p{
 	color:#777;
 	font-size: 24px;
 	margin-bottom:10px;
 }
-
-#footer .top .detail li{
+#footer .footer-main  li{
 	color:#777;
 	font-size: 16px;
 	padding:3px 0;
 	text-align: center;
 }
-
-#footer .top .detail hr{
+#footer .footer-main hr{
 	width:80%;
 	border:1px solid #777;
 	}
-
-
-#footer .top a:link{
+#footer .footer-main a:link{
 	color:#777;
 }
-#footer .top a:visited{
+#footer .footer-main a:visited{
 	color:#777;
 }
-#footer .top a:hover{
+#footer .footer-main a:hover{
 	color:#fdc311;
 }
-#footer .top a:active{
+#footer .footer-main a:active{
 	color:#fdc311;
 }
 /*注意顺序是LVHA*/
+
+#footer .footer-bottom{
+	height:80px;
+	background-color: #333;
+}
+#footer .footer-bottom span{
+	color: #FFFFFF;
+	font-size: 14px;
+	line-height: 80px;
+	font-family: "microsoft yahei";
+}
+
