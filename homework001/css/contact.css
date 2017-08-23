@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+
+#contact-us h3{
+	/*margin-left:10px;*/
+	font-size:25px;
+	margin:10px 0 5px 0;
+}
+#contact-us {
+	width:100%;
+	margin-bottom:20px;
+}
+#contact-us .contact-container{
+	width:1000px;
+	margin:0 auto;
+}
+
+#contact-us hr{
+	border: 1px dashed #999;
+}
+
+#contact-us p{
+	line-height: 2;
+	/*text-indent: 30px;*/
+	margin-top:5px;
+}

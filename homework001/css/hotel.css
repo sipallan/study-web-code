@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+.hotel-container-main{
+	min-height:900px;
+}
+
+.hotel-container-main h3{
+	font-size: 25px;
+	margin:10px 0 5px 3px;
+}
+
+.hotel-container-main .hotel-list{
+	margin:10px 20px 0 20px;
+	border:1px solid #eee;
+	width:300px;
+	display: inline-block;
+}
+
+.hotel-container-main .hotel-view hr{
+	border:1px dashed #999;
+}
+
+.hotel-list .hotel-name {
+	font-size:14px;
+	color:#555;
+	text-align: center;
+	letter-spacing: 1px;
+	margin:5px 0;
+}

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>妹娘厨房</title>
+		<link rel="stylesheet" href="css/order.css" />
+		<link rel="stylesheet" href="css/base.css" />
+	</head>
+	<body>
+	<!--导航部分-->
+		<nav id="nav">
+			<section class="nav-main">
+				<h1 class="logo">博客小站</h1>
+				<ul class="navgation">
+					<li>
+						<a href="index.html">首&nbsp&nbsp页</a>
+					</li>
+					<li>
+						<a href="hotfood.html">热门美食</a>
+					</li>
+					<li>
+						<a class="active" href="movie.html">特价电影</a>
+					</li>
+					<li>
+						<a href="hotel.html">协议酒店</a>
+					</li>
+					<li>
+						<a href="contact.html">联系我们</a>
+					</li>
+				</ul>
+			</section>
+		</nav>
+		<!--头部部分-->
+		<div id="headline">
+			<div class="shade">
+				<!--遮罩-->
+			</div>
+			<hgroup class="hgroup">
+				<h2>特价电影</h2>
+				<h3>最低3折起，国内外大片等你来看</h3>
+			</hgroup>
+		</div>
+			
+		<!--右侧sidebar部分-->
+		<div id="container">
+		<aside class="sidebar">
+				<div class="sidebox commmand">
+					<h2>美食推荐</h2>
+					<div class="tags">
+					<a href="###">自助餐(12)</a>
+					<a href="###">西餐(15)</a>
+					<a href="###">中餐(80)</a>
+					<a href="###">烧烤(34)</a>
+					<a href="###">火锅(28)</a>
+					<a href="###">小炒(248)</a>
+					<a href="###">素食(57)</a>
+					<a href="###">牛排(7)</a>
+					<a href="###">下午茶(76)</a>
+					<a href="###">咖啡(5)</a>
+					<a href="###">面包(8)</a>
+					</div>
+				</div>
+				<div class="sidebox hot">
+					<h2>热门美食</h2>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+					<figure class="hot-img">
+						<img src="img/hotimg.png" alt="" />
+						<figcaption>星巴克5折</figcaption>
+					</figure>
+				</div>
+				<div class="sidebox box">
+					<h2>美食百宝箱</h2>
+					<span>
+					<img src="img/img-logo.png" alt="" />
+					<a href="###">今天谁买单</a>
+					</span>
+					<span>
+					<img src="img/img-logo.png" alt="" />
+					<a href="###">猜猜几点到</a>
+					</span>
+					<span>
+					<img src="img/img-logo.png" alt="" />
+					<a href="###">命中注定吃什么</a>
+					</span>
+					<span>
+					<img src="img/img-logo.png" alt="" />
+					<a href="###">你和谁有缘分</a>
+					</span>
+					<span>
+					<img src="img/img-logo.png" alt="" />
+					<a href="###">星座配对</a>
+					</span>
+					<!--这里用background也可以实现-->
+				</div>
+			</aside>
+		<!--左侧布局部分,因为要沿用上一个页面的，左侧最好重新给一个id-->
+		<div class="movie-container-main">
+			<div class="movie-plan">
+				<h3>电影预定</h3>
+				<hr />
+				<form action="###" method="get">
+					<div class="movie-type">
+					<span>电影类型:</span>
+					<label>
+						<input class="radio-input" name="movie" value="1" type="radio"  checked="checked"/>
+						<span class="radio-checked">动作</span>
+					</label>
+					<label>
+						<input class="radio-input" name="movie" value="2" type="radio" />
+						<span class="radio-checked">剧情</span>
+					</label>
+					<label>
+						<input class="radio-input" name="movie" value="3" type="radio" />
+						<span class="radio-checked">惊悚</span>
+					</label>
+					<label>
+						<input class="radio-input" name="movie" value="4" type="radio" />
+						<span class="radio-checked">科幻</span>
+					</label>
+					</div>
+					<div class="movie-detail">
+					<span>影院位置:</span>
+					<label>
+						<input class="location" type="text" />
+					</label>
+					<span>播放日期:</span>
+					<label>
+						<input class="location" type="date" />
+					</label>
+					</div>
+					<button class="movie-plan-button type="button">订票</button>
+				</form>
+			</div>
+			<div class="hot-movie">
+				<h3>最新电影</h3>
+				<hr />
+				<div class="hot-movie-nav">
+					<h4>热门电影:</h4>
+					<ul class="hot-movie-nav-ul">
+						<li>
+							<label>
+								<input class="radio-input" name="movie" value="2" type="radio" />
+								<span class="radio-checked">超人</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input class="radio-input" name="movie" value="2" type="radio" checked="" />
+								<span class="radio-checked">蜘蛛侠</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input class="radio-input" name="movie" value="2" type="radio" />
+								<span class="radio-checked">肖申克的救赎</span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input class="radio-input" name="movie" value="2" type="radio" />
+								<span class="radio-checked">越狱</span>
+							</label>
+						</li>
+						<li><label>
+								<input class="radio-input" name="movie" value="2" type="radio" />
+								<span class="radio-checked">行尸走肉</span>
+							</label></li>
+					</ul>
+				</div>
+				<div class="movie-table">
+					<table>
+						<thead>
+						<tr>
+							<th>名称</th>
+							<th>日期</th>
+							<th>价格</th>
+							<th>税费</th>
+							<th>餐食</th>
+							<th>服务商</th>
+							<th>预定</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						<tr>
+							<td>蜘蛛侠</td>
+							<td>2017.8.22</td>
+							<td class="price">58</td>
+							<td>4</td>
+							<td>有</td>
+							<td>万达影业</td>
+							<td><span>预定</span></td>
+						</tr>
+						</tbody>
+						<tfoot class="movie-table-more">
+							<tr>
+								<td colspan="7"><a href="###">点击查看更多...</a></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<!--底部部分-->
+		<footer id="footer">
+			<div class="footer-main">
+				<div class="footer-common footer-left">
+				<ul>
+					<p>合作伙伴</p>
+					<hr />
+					<li><a href="http://www.meituan.com/">美团网-美团外卖优惠券</a></li>
+					<li><a href="https://www.dianping.com/fuzhou">大众点评-要吃最好的</a></li>
+					<li>饿了么-工作点餐利器</li>
+					<li>百度外卖-30分钟送达</li>
+				</ul>
+				</div>
+				<div class="footer-common footer-middle">
+					<ul>
+					<p>常见问题</p>
+					<hr />
+					<li>下单后多长时间送达？</li>
+					<li>我点的餐漏单怎么办？</li>
+					<li>超时送达怎么办？</li>
+					<li>付款失败怎么办？</li>
+				</ul>
+				</div>
+				<div class="footer-common footer-right">
+					<ul>
+					<p>联系方式</p>
+					<hr />
+					<li>微博:xxxxxx.sina.com</li>
+					<li>地址：北京市xx路xx区xx街道</li>
+					<li>电话：18022312456</li>
+					<li>邮箱：meiniangcufang@163.com</li>
+				</ul>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<span>©2017 meiniangcufang.com  京ICP证030100号  京公网安备11010802014100号  
+			</span>
+			</div>
+		</footer>
+	</body>
+</html>

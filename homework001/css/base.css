@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*清除浏览器默认格式，规定全局格式*/
-body,h1,ul,section,div,h2,p,li,img{
+body,h1,ul,section,div,h2,h4,p,li,img{
 	margin:0;
 	padding:0;
 	font-family: "微软雅黑";
@@ -9,7 +9,9 @@ body,h1,ul,section,div,h2,p,li,img{
 a{
 	text-decoration: none;
 }
-
+ul{
+	list-style: none;
+}
 /*头部*/
 #nav{
 	background-color: #ffffff;
@@ -151,3 +153,348 @@ a{
 	font-family: "microsoft yahei";
 }
 
+/*头图*/
+#headline{
+	width:100%;
+	min-width:1000px;
+	height:300px;
+	background:url(../img/informationbg.jpg) no-repeat;
+	background-position: top center;
+	position: relative;
+}
+
+#headline hgroup{
+	width:1000px;
+	/*height:300px;*/
+	margin:0 auto;
+	color:white;
+	font-family: "microsoft yahei";
+	padding:100px 0 0 100px;
+	position: absolute
+	/*background-color: red;*/
+}
+
+#headline h2{
+	font-size:40px;
+}
+
+#headline .shade{
+	height:300px;
+	width:100%;
+	min-width:1000px;
+	background-color: #000;
+	opacity: 0.5;
+	position: absolute;
+}
+
+
+
+/*右侧内容和左侧布局*/
+
+#container{
+	width:1000px;
+	/*height:1000px;*/
+	margin:0 auto;
+	/*background-color: #fff;*/
+}
+
+#container .container-main{
+	width:700px;
+	/*background-color: grey;*/
+	box-sizing: border-box;
+}
+
+#container .sidebar{
+	width:300px;
+	/*background-color: red;*/
+	float:right;
+	text-align: center;
+}
+
+#container .sidebox{
+	font-size:12px;
+	font-weight: normal;
+	text-align: left;
+	/*text-indent: 9px;*/
+	margin:0 10px 5px 10px;
+	border:1px solid #eee;
+	
+}
+
+#container h2{
+	font-family: "microsoft yahei";
+	margin:15px 0;
+	text-indent: 8px;
+	text-align: left;
+}
+
+#container .tags{
+	font-size: 14px;
+	text-align: left;
+	margin:0 0 10px 5px;
+}
+
+#container .tags a{
+	width:80px;
+	height:30px;
+	line-height: 30px;
+	line-height: 30px;
+	background-color: #f9f8f6;
+	display: inline-block;
+	margin:3px;
+	text-align: center;
+	
+}
+
+#container .tags a:link{
+	color:black;
+}
+
+#container .tags a:visited{
+	color:black;
+}
+
+#container .tags a:hover{
+	color:#f9cb06;
+}
+
+#container .hot-img{
+	width:120px;
+	margin:0;
+	padding:0 5px 10px 5px;
+	text-align: text;
+	display: inline-block;
+}
+
+#container img{
+	/*border: 1px solid #999;*/
+}
+
+#container .hot-image figcaption{
+	width:130px;
+	text-align: center;
+	font-family: "microsoft yahei";
+	font-size: 12px;
+	margin:10px 0 5px 0;
+}
+
+#container .box{
+	text-align: left;
+	font-size: 13px;
+}
+
+#container .box span{
+	width: 123px;
+	height:30px;
+	line-height: 30px;
+	background-color: #f9f8f6;
+	display: inline-block;
+	margin-left:8px;
+	font-family: "microsoft yahei";
+	text-align: left;
+	margin:0 0 10px 10px;
+}
+
+#container img{
+	/*margin-top:5px;*/
+	 vertical-align: middle;
+}
+
+#container a{
+	/*padding-bottom:5px;*/
+	/*display: inline-block;*/
+}
+
+#container .box a:link{
+	color:black;
+}
+
+#container .box a:visited{
+	color:black;
+}
+
+#container .box a:hover{
+	color:#f9cb06;
+}  
+
+#container .infor{
+	background-color: #eee;
+	height:43px;
+	line-height: 43px;
+	margin-top:10px ;
+	/*居中对齐*/
+}
+#container .infor li{
+	list-style: none;
+	display: inline-block;
+	font-family: "微软雅黑";
+}
+
+#container .infor .left{
+	float:left;
+	/*background-color: grey;*/
+	/*margin-left:30px;*/
+	text-align: center;
+}
+
+#container .infor .left li{
+	/*background-color:grey ;*/
+	/*padding:0 20px 0 20px;*/
+	width:150px;
+	margin-left:1px;
+}
+
+#container .infor .left li{
+	/*background-color:grey ;*/
+	/*padding:0 20px 0 20px;*/
+}
+#container .infor .left li:first-child{
+	background-color: #fff;
+	border-top:2px solid #008000;
+}
+
+#container .infor .right{
+	float:right;
+	/*background-color: red;*/
+	text-align: center;
+	margin:0 10px 0 0; 
+	width:120px;
+}
+
+#container .infor .right li{
+	/*margin:0 5px 0 0px;*/
+	font-size:14px;
+	/*background-color: red;*/
+	display: inline-block;
+	width:36px;
+}
+#container .infor .right a{
+	padding:3px 3px;
+	
+}
+
+#container .infor .right .selected{
+	color:white;
+	background-color: green;
+}
+
+#container .infor .right a:hover{
+	color:white;
+	background-color: green;
+}
+
+#container .infor-container{
+	width:698px;
+	/*height:180px;*/
+	/*background-color:grey;*/
+}
+
+.infor-container .food{
+	/*background-color: red;*/
+	width:698px;
+	/*height:180px;*/
+	margin:5px 10px 0 0px;
+	border:1px solid #eee;
+	position: relative;
+}
+
+
+.infor-container .food img{
+	float:left;
+	/*display: none;*/
+	margin:15px 0 15px 5px;
+}
+
+.infor-container .info-food h2{
+	width:600px;
+	height:35px;
+	line-height:35px;
+/*	margin-left:500px;*/
+	/*background-color: grey;*/
+	font-size: 20px;
+	padding-left:310px;
+}
+
+.infor-container h3{
+	width:240px;
+	margin-left:320px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.infor-container h3 span{
+	border:1px solid green;
+	border-radius: 4px;
+	padding:1px;
+	color:green;
+	margin-right:3px;
+}
+
+.infor-container footer{
+	width:600px;
+	margin:30px;
+	
+}
+
+.infor-container .buy{
+	position: absolute;
+	top:30px;
+	right:10px;
+}
+
+.infor-container .price{
+	font-size:40px;
+	color:red;
+}
+
+.infor-container .reserve a{
+	display: block;
+	font-size: 20px;
+	background-color: green;
+	padding:3px;
+	border-radius: 4px;
+	color:white;
+}
+
+.infor-container .tags{
+	width:60px;
+	color:white;
+	background-color: green;
+	position: absolute;
+	top:20px;
+	LEFT:0px;
+}
+
+.infor-container .disc{
+	width:60px;
+	height:100px;
+	color:black;
+	background:url(../img/disc.png) no-repeat;
+	position: absolute;
+	top:0px;
+	right:-11px;
+}
+
+.infor-container .disc span{
+	display: block;
+	transform: rotate(35deg);
+	margin:5px 0 0 8px;
+	/*只对block有用*/
+}
+
+.more{
+	width:200px;
+	height:30px;
+	line-height: 30px;
+	/*background-color: #eee;*/
+	margin-top:25px;
+	text-align:center;
+	margin:20px auto;
+	border:1px solid #eee;
+	padding:0;
+	cursor: pointer;
+}
+
+.more a{
+	display: block;
+}
