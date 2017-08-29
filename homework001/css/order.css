@@ -1,39 +1,39 @@
 @charset "utf-8";
 
-
-#container .movie-container-main{
-	
+.movie-container-main{
+	width:698px;
+	box-sizing: border-box;
+	margin:
 }
 
-
-#container .movie-plan{
+.movie-plan{
 	width:698px;
 	/*height:300px;*/
 	/*background-color: red;*/
 	margin:10px 0 10px 0;
 }
 
-#container .movie-container-main h3{
+.movie-container-main h3{
 	/*background-color: red;*/
 	font-size: 25px;
 	margin:5px 0 5px 3px;
 }
 
-#container .movie-plan hr{
+.movie-plan hr{
 	border:1px dashed #999;
 }
 
-#container .movie-plan form{
+.movie-plan form{
 	margin:10px 0 0 5px;
 	/*background-color: red;*/
 	position: relative;
 }
  
-#container .movie-plan .radio-input{
+.movie-plan .radio-input{
    display:none;
 }
 
-#container .movie-plan .radio-checked{
+.movie-plan .radio-checked{
 	border:1px solid rgba(0,0,0,0.15);
 	border-radius: 5px;
 	/*background-color: green;*/
@@ -47,7 +47,7 @@
 	/*增加一个背景的框*/
 }
 
-#container .movie-plan .radio-input:checked + .radio-checked{
+.movie-plan .radio-input:checked + .radio-checked{
 	content:"";
 	width:46px;
 	height:24px;
@@ -58,11 +58,11 @@
 	/*给框增加颜色*/
 }
 
-#container .movie-plan .movie-detail{
+.movie-plan .movie-detail{
 	margin-top:10px;
 }
 
-#container .movie-detail .location{
+.movie-detail .location{
 	width:200px;
 	height:20px;
 	margin-left:5px;
@@ -70,7 +70,7 @@
 	font-size: 16px;
 }
 
-#container .movie-plan-button{
+.movie-plan-button{
 	width:80px;
 	height:60px;
 	line-height:50px;
@@ -88,22 +88,22 @@
 	top:0;
 }
 
-#container .movie-plan-button a:link{
+.movie-plan-button a:link{
 	color:white
 }
 
-#container .hot-movie hr{
+.hot-movie hr{
 	border:1px dashed #999;
 }
 
-#container .hot-movie-nav h4 {
+.hot-movie-nav h4 {
 	height:40px;
 	line-height: 40px;
 	float:left;
 	margin-left:5px;
 }
 
-#container .hot-movie-nav-ul{
+.hot-movie-nav-ul{
 	display: inline-block;
 	/*background-color: red;*/
 	width:500px;
@@ -112,16 +112,16 @@
 	margin-left:6px;
 }
 
-#container .hot-movie-nav-ul li{
+.hot-movie-nav-ul li{
 	float:left;
 	margin-right:17px;
 	
 }
-#container .hot-movie-nav-ul .radio-input{
+.hot-movie-nav-ul .radio-input{
 	display: none;
 }
 
-#container .hot-movie-nav-ul .radio-checked{
+.hot-movie-nav-ul .radio-checked{
 	border:1px solid rgba(0,0,0,0.15);
 	border-radius: 5px;
 	/*background-color: green;*/
@@ -137,7 +137,7 @@
 	/*增加一个背景的框*/
 }
 
-#container .hot-movie-nav-ul .radio-input:checked + .radio-checked{
+.hot-movie-nav-ul .radio-input:checked + .radio-checked{
 	content:"";
 	width:100%;
 	height:24px;
@@ -150,19 +150,19 @@
 }
 
 
-#container .hot-movie-nav-ul .active{
+.hot-movie-nav-ul .active{
 	background-color: green;
 	padding:5px;
 	border-radius: 5px;
 	color:white;
 }
 
-#container .hot-movie-nav-ul a{
+.hot-movie-nav-ul a{
 	color:black;
 }
 
-#container .movie-table table{
-	width:700px;
+.movie-table table{
+	width:698px;
 	/*min-height:700px;*/
 	border-collapse: collapse;
 	border:1px solid rgba(0,0,0,0.2);
@@ -171,32 +171,32 @@
 	line-height: 40px;
 }
 
-#container .hot-movie{
+.hot-movie{
 	min-height:780px;
 }
 
-#container .movie-table table th{
+.movie-table table th{
 	height:50px;
 	line-height: 50px;
 	border-bottom:1px solid rgba(0,0,0,0.2);
 	background-color: #eee;
 	}
 	
-#container .movie-table table td{	
+.movie-table table td{	
 	height:50px;
 	line-height: 50px;
 	border-bottom:1px solid rgba(0,0,0,0.2);
 }
 
-#container .movie-table table tr:hover{
+.movie-table table tr:hover{
 	background-color: #eee;
 }
 
-#container .movie-table table .price{
+.movie-table table .price{
 	color:red;
 }
 
-#container .movie-table table span{
+.movie-table table span{
 	display: inline-block;
 	width:50px;
 	height:40px;
@@ -206,11 +206,11 @@
 	border-radius: 4px;
 }
 
-#container .movie-table-more td{
+.movie-table-more td{
 	border:none;
 }
 
-#container .movie-table-more a:link{
+.movie-table-more a:link{
 	color:black;
 }
 /*LVHA*/
