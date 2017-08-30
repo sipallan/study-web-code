@@ -1,0 +1,247 @@
+@charset "utf-8";
+
+html{
+	font-size:625%;
+	/*相当于规定根元素的字体大小为1rem=100px
+	 	后续若要计算px大小，就把所需要的像素值/100px
+	 * */
+}
+body,h1,h2,h3,p,ul,ol,form,img{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background-color: #f5f5f5;
+	font-family: "微软雅黑";
+	font-size: 0.16rem;
+}
+
+ul,ol{
+	list-style: outside none none;
+}
+
+a{
+	text-decoration: none;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+#nav .nav-container{
+	width:100%;
+	min-width:3.2rem;
+	height:0.35rem;
+	background-color: #333;
+	margin:0 auto;
+	font-size: 0.16rem;
+	position: fixed;
+	top:0;
+	z-index:9999;
+}
+
+#nav .navgation li{
+	width:25%;
+	height:0.35rem;
+	line-height: 0.35rem;;
+	text-align: center;
+	float:left;
+	border-right:0.01rem solid white;
+	box-sizing: border-box;
+}
+
+#nav .navgation li a{
+	display: block;
+	height:0.35rem;
+}
+
+#nav .navgation .active{
+	background-color: #222;
+}
+
+#nav .navgation li a:link{
+	color:white;
+}
+
+#nav .navgation li a:visited{
+	color:white;
+}
+
+#nav .navgation li a:hover{
+	background-color: #999;
+}
+
+#nav .navgation li a:active{
+	background-color: #999;
+}
+
+.adver{
+	max-width:6.4rem;
+	margin:0 auto;
+	margin-top:0.35rem;
+}
+/*这里因为前面规定的最大宽度不是100% 导致宽度被固定 因此无法自适应*/
+
+#footer {
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	/*margin-top:.1rem;*/
+	background-color: #333;
+	color:white;
+	font-size:0.14rem;
+	padding:.1rem 0;
+}
+
+#footer .footer-main a:link{
+	color:white;
+}
+
+#footer .footer-main a:visited{
+	color:white;
+}
+
+#footer .footer-main a:hover{
+	color:#999;
+}
+
+#search .search-wrap{
+	width:100%;
+	max-width:6.4rem;
+	height:.27rem;
+	position: relative;
+	margin:0 auto;
+	background-color: #eee;
+}
+
+#search .search-wrap .search{
+	width:99%;
+	/*min-width:.64rem;*/
+	height:.20rem;
+	margin:0.01rem auto;
+	display: block;
+}	
+
+#search .search-wrap .button{
+	height:.25rem;
+	border-top-right-radius: 0.04rem;
+	border-bottom-right-radius: 0.04rem;
+	border:none;
+	background-color: dodgerblue;
+	color:white;
+	position: absolute;
+	right:0.5%;
+	/*因为wrap的宽度是100%，所以这里也只能用相对位置*/
+	top:0.01rem;
+}
+
+#main{
+	width:100%;
+	max-width:6.4rem;
+	/*height:0.85rem;*/
+	/*background-color: red;*/
+	margin:0 auto;
+}
+
+#main .title{
+	width:100%;
+	/*height:0.85rem;*/
+	text-align: center;
+	margin:0.08rem 0 10px 0;
+	color:#666;
+}
+
+/*根据屏幕调整字体大小*/
+@media (min-width: 4.8rem){
+	
+	#main .title h2{
+	font-size:0.29rem;
+	}
+	#main .title h3{
+	font-size:0.15rem;
+	font-weight: normal;
+	}
+}
+
+@media (max-width: 4.8rem){
+	
+	#main .title h2{
+	font-size:0.05rem;
+	}
+	#main .title h3{
+	font-size:0.02rem;
+	font-weight: normal;
+	}
+}
+
+#main .container{
+	width:100%;
+	margin:0 auto;
+}
+
+#main .container figure{
+	width:47%;
+	margin:0;
+	/*height:2.4rem;*/
+	/*display: inline-block;*/
+	float:left;
+	text-align: left;
+	margin-left:0.05rem;
+	margin-bottom:0.08rem;
+	/*background-color: red;*/
+	border:0.01rem #999 solid;
+	/*position: relative;*/
+}
+/*这里用inline-block，当屏幕调整为p6时，figure会垂直排列，不会自适应*/
+
+#main .clearfix{
+	clear: both;
+	margin: 0.01rem;
+	visibility: hidden;
+	/*background-color: red;*/
+	font-size: 0;
+	height:0.01rem;
+}
+
+/*这里是新做一个div来消除浮动，这个div可以调整下边距的margin值*/
+
+#main .container p{
+	letter-spacing: 0.05rem;
+	margin:0.03rem 0;
+	margin-left:0.09rem;
+	color:#555;
+	font-size: 0.13rem;;
+	/*white-space: nowrap;
+	overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+}
+
+#main .info{
+	position: relative;
+	height:0.25rem;
+	/*在父元素定位*/
+}
+
+#main .price{
+	position: absolute;
+	left:0;
+	bottom:0;
+	/*这里用position: absolute块级元素特征就没了*/
+	float:left;
+	/*background-color: gray;*/
+	font-size: 0.14rem;
+	color:red;
+	margin:0.03rem 0.08rem;
+}
+
+#main .sat{
+	position: absolute;
+	right:0;
+	bottom:0;
+	font-size: 0.08rem;
+	color:#666;
+	margin:0.03rem 0.08rem;
+}
+
