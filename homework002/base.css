@@ -168,10 +168,10 @@ img{
 @media (max-width: 480px){
 	
 	#main .title h2{
-	font-size:0.1rem;
+	font-size:0.23rem;
 	}
 	#main .title h3{
-	font-size:0.02rem;
+	font-size:0.05rem;
 	font-weight: normal;
 	}
 }
