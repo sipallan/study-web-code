@@ -52,7 +52,8 @@
 .movie-container-main .movie-plan h3,.hot-movie h3{
 	padding-top:0.05rem;
 	font-size: 0.2rem;
-	color:#666
+	color:#666;
+	position: relative;
 }
 
 .movie-plan hr,.hot-movie hr{
@@ -61,8 +62,14 @@
 
 .movie-plan form{
 	margin:10px 0 0 5px;
-	/*background-color: red;*/	
+	/*background-color: red;	*/
+	display: block;
+	/*text-align: center;*/
+	margin:0 auto;
+	max-width:3.0rem;
 }
+
+/*这里为什么margn：0 auto不管用？*/
 
 .movie-type h4,.hot-movie-nav h4{
 	margin:10px 0 10px 0;
@@ -204,7 +211,7 @@
 	/*border-collapse: collapse;*/
 	border:1px solid rgba(0,0,0,0.2);
 	text-align: center;
-	margin:10px 0;
+	margin:10px auto;
 	line-height:40px;
 }
 
