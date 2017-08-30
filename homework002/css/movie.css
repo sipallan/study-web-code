@@ -1,0 +1,252 @@
+.headline{
+	max-width:6.4rem;
+	margin:0 auto;
+	position: relative;;
+}
+
+.headline img{
+	margin-top:0.35rem;
+}
+
+.headline hgroup{
+	position: absolute;;	
+	top:20%;
+	left:6%;
+	color:white;
+}
+
+@media (min-width:480px) and (max-width: 640px){
+	.headline hgroup h2{
+	font-size: 0.25rem;
+	font-weight: normal;
+	padding-bottom: 0.05rem;
+}
+	.headline hgroup h3{
+	font-size: 0.15rem;
+	font-weight: normal;
+}
+}
+
+@media (max-width:480px) {
+	.headline hgroup h2{
+	font-size: 0.2rem;
+	font-weight: normal;
+	padding-bottom: 0.05rem;
+}
+	.headline hgroup h3{
+	font-size: 0.05rem;
+	font-weight: normal;
+}
+}
+
+.movie-container-main{
+	max-width:6.4rem;
+	margin:0 auto;
+}
+
+.movie-container-main .movie-plan{
+	max-width: 6.4rem;
+	margin:0.05rem;
+}
+
+.movie-container-main .movie-plan h3,.hot-movie h3{
+	padding-top:0.05rem;
+	font-size: 0.2rem;
+	color:#666
+}
+
+.movie-plan hr,.hot-movie hr{
+	border:1px dashed #999;
+}
+
+.movie-plan form{
+	margin:10px 0 0 5px;
+	/*background-color: red;*/	
+}
+
+.movie-type h4,.hot-movie-nav h4{
+	margin:10px 0 10px 0;
+	font-weight: normal;
+}
+ 
+.movie-plan .radio-input{
+   display:none;
+}
+
+.movie-plan .radio-checked{
+	border:1px solid rgba(0,0,0,0.15);
+	border-radius: 5px;
+	/*background-color: green;*/
+	/*padding:3px;*/
+	/*color:white;*/
+	display:inline-block;
+	width:50px;
+	height:25px;
+	text-align: center;
+	/*margin-left:5px;*/
+	/*增加一个背景的框*/
+}
+
+.movie-plan .radio-input:checked + .radio-checked{
+	content:"";
+	width:46px;
+	height:24px;
+	background-color: green;
+	padding:3px;
+	color:white;
+	display:inline-block;
+	/*给框增加颜色*/
+}
+
+.movie-location{
+	margin:10px 0;
+}
+
+.play-time{
+	margin-bottom:10px;
+}
+
+.movie-detail .location{
+	min-width:2.1rem;
+	height:0.2rem;
+	font-family: "微软雅黑";
+	font-size: 0.16rem;
+}
+
+.movie-plan-button{
+	width:2.7rem;
+	height:0.3rem;
+	/*line-height:50px;*/
+	margin:0 auto;
+	text-align: center;
+	background-color: green;
+	color:white;
+	border-radius:4px;
+	font-size:0.16rem;
+	box-shadow: none;
+	border:1px solid green;
+	display:block
+}
+
+.movie-plan-button a:link{
+	color:white
+}
+
+.hot-movie h3{
+	padding-left:5px;
+}
+
+.hot-movie-nav-ul{
+	display: inline-block;
+	/*background-color: red;*/
+	width:500px;
+	height:40px;
+	line-height: 40px;
+	margin-left:6px;
+}
+
+.hot-movie-nav h4{
+	margin-left:5px;
+}
+
+.hot-movie-nav-ul li{
+	float:left;
+	margin-right:17px;
+	
+}
+.hot-movie-nav-ul .radio-input{
+	display: none;
+}
+
+.hot-movie-nav-ul .radio-checked{
+	border:1px solid rgba(0,0,0,0.15);
+	border-radius: 5px;
+	/*background-color: green;*/
+	padding:3px;
+	/*color:white;*/
+	display:inline-block;
+	width:100%;
+	height:25px;
+	line-height: 25px;
+	text-align: center;
+	margin-left:5px;
+	vertical-align: middle;
+	/*增加一个背景的框*/
+}
+
+.hot-movie-nav-ul .radio-input:checked + .radio-checked{
+	content:"";
+	width:100%;
+	height:24px;
+	background-color: green;
+	padding:3px;
+	color:white;
+	display:inline-block;
+	/*给框增加颜色*/
+	/*这里只能给固定宽度，不能根据内容给宽度*/
+}
+
+
+.hot-movie-nav-ul .active{
+	background-color: green;
+	padding:5px;
+	border-radius: 5px;
+	color:white;
+}
+
+.hot-movie-nav-ul a{
+	color:black;
+}
+
+.movie-table table{
+	min-width:320px;
+	max-width:640px;
+	/*border-collapse: collapse;*/
+	border:1px solid rgba(0,0,0,0.2);
+	text-align: center;
+	margin:10px 0;
+	line-height:40px;
+}
+
+.movie-table{
+	margin-left:0;
+}
+
+.movie-table table th{
+	height:50px;
+	line-height: 50px;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+	background-color: #eee;
+	}
+	
+.movie-table table td{	
+	height:50px;
+	line-height: 50px;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+}
+
+.movie-table table tr:hover{
+	background-color: #eee;
+}
+
+.movie-table table .price{
+	color:red;
+}
+
+.movie-table table span{
+	display: inline-block;
+	width:50px;
+	height:40px;
+	line-height: 40px;
+	background-color:green;
+	color:white;
+	border-radius: 4px;
+}
+
+.movie-table-more td{
+	border:none;
+}
+
+.movie-table-more a:link{
+	color:black;
+}

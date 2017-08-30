@@ -1,0 +1,133 @@
+
+.headline{
+	max-width:6.4rem;
+	margin:0 auto;
+	position: relative;;
+}
+
+.headline img{
+	margin-top:0.35rem;
+}
+
+.headline hgroup{
+	position: absolute;;	
+	top:20%;
+	left:6%;
+	color:white;
+}
+
+@media (min-width:480px) and (max-width: 640px){
+	.headline hgroup h2{
+	font-size: 0.25rem;
+	font-weight: normal;
+	padding-bottom: 0.05rem;
+}
+	.headline hgroup h3{
+	font-size: 0.15rem;
+	font-weight: normal;
+}
+}
+
+@media (max-width:480px) {
+	.headline hgroup h2{
+	font-size: 0.2rem;
+	font-weight: normal;
+	padding-bottom: 0.05rem;
+}
+	.headline hgroup h3{
+	font-size: 0.05rem;
+	font-weight: normal;
+}
+}
+
+.container{
+	max-width:6.4rem;
+	margin:0 auto;
+}
+
+.container .title{
+	padding-top:0.1rem;
+	padding-left:0.02rem;
+	font-size: 0.2rem;
+	color:#666;
+}
+
+.container hr{
+	border:1px dashed #666;
+}
+
+.container figure{
+	margin:0.05rem 0.02rem;
+	max-width:6.4rem;
+	border:1px solid #666;
+	position: relative;
+}
+.container figure:after{
+	content:".";
+	clear:both;
+	visibility: hidden;
+	height:0;
+	display: block;
+}
+/*清理浮动有两种方式，一种是新写一个div清理浮动，另外一个是本身的父容器清理浮动*/
+.container figure img{
+	width:50%;
+	float:left;
+	/*visibility: hidden;*/
+}
+
+.container figure figcaption{
+	width:50%;
+	margin-left:51.5%;
+	/*float:right;*/
+	/*ackground-color: red;*/
+	
+}
+
+.container section{
+	margin-top:0.05rem;
+}
+
+@media (min-width: 480px) and (max-width:1000px) {
+	.container section h2{
+	font-weight:normal;
+	font-size: 0.2rem;
+	margin-top:0.05rem;
+	color:red;
+}
+
+	.container section h3{
+	width:95%;
+	font-weight:normal;
+	font-size: 0.15rem;
+	margin-top:0.05rem;
+}
+}
+
+@media (max-width: 480px) {
+	.container section h2{
+	font-weight:normal;
+	font-size: 0.13rem;
+	margin-top:0.05rem;
+	color:red;
+}
+
+	.container section h3{
+	width:95%;
+	font-weight:normal;
+	font-size: 0.03rem;
+	margin-top:0.05rem;
+}
+}
+
+.container .info{
+	position: absolute;
+	bottom:0px;
+	right:8px;
+	font-size: 0.14rem;;
+}
+
+.container strong{
+	font-weight: normal;
+	color:red;
+}
