@@ -154,7 +154,7 @@ img{
 }
 
 /*根据屏幕调整字体大小*/
-@media (min-width: 4.8rem){
+@media (min-width: 480px) and (max-width:1000px){
 	
 	#main .title h2{
 	font-size:0.29rem;
@@ -165,13 +165,13 @@ img{
 	}
 }
 
-@media (max-width: 4.8rem){
+@media (max-width: 480px){
 	
 	#main .title h2{
-	font-size:0.05rem;
+	font-size:0.2rem;
 	}
 	#main .title h3{
-	font-size:0.02rem;
+	font-size:0.05rem;
 	font-weight: normal;
 	}
 }
