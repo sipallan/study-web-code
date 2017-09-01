@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>JS_notes</title>
+		<style type="text/css">
+			body{
+				font-family: "微软雅黑";
+				line-height: 40px;
+			}
+			h2{
+				color:red;
+			}
+			span{
+				color:red;
+				font-weight: bold;
+			}
+			
+			li{
+				font-size: 18px;
+				font-weight: normal;	
+				margin-bottom:10px;
+				margin:5px 50px;
+			}
+			
+			/*table通用样式*/
+			table{
+				margin:0 auto;
+				border:1px solid black;
+				text-align: center;
+				width:600px;
+				margin-bottom: 10px;
+				border-collapse:collapse
+			}
+			table,tr,th,td{
+				border:1px solid black;
+			}
+			table caption{
+				font-weight: bold;
+				font-size: 20px;
+				margin-bottom:5px;
+			}
+
+			/*class="number"的样式*/
+			.number table tr:first-child th:first-child{
+				/*background-color: red;*/
+				width:300px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul>
+			<h2>Javascript的核心部分</h2>
+			<li>ECMAscript是核心语法</li>
+			<li>文档对象模型-DOM</li>
+			<li>浏览器对象模型-BOM</li>
+		</ul>
+		<ul>
+			<h2>关于ECMAscript</h2>
+			<li>ECMAscript不一定要依赖浏览器</li>
+			<li>ECMAscript区分大小写</li>
+			<li>ECMAscript是松散结构，可保存任何类型的数据</li>
+			<li><span>变量名开头必须以字母、下划线和美元符号$开头</span>，其他部分除了这三种外还可以使用数字</li>
+			<li>不能用关键字、保留字、true、false、null作为变量名</li>
+			<li>六种常量：数字(100)、字符串("")、正则表达式(/gs/ju)、布尔值(true)、对象(null)、数组表达式([1,2,3,4,5]、对象表达式({x:1,y:2}))</li>
+			<li>关键字：js中已经被使用的字符</li>
+			<li>保留字：js中未来可能会用到的字符</li>
+		</ul>
+		<ul>
+			<h2>关于变量</h2>
+			<li>声明变量：制造一个容器</li>
+			<li>变量初始化（也叫给变量赋值）：在容器里放入内容</li>
+			<li>输出变量的值：打印容器的东西</li>
+			<li>定义变量时，只要有定义变量就必须初始化</li>
+		</ul>
+		<ul>
+			<h2>关于数据类型</h2>
+			<li>ECMAscript不能创建自定义数据类型</li>
+			<li>typeof操作符：用来检测变量或常量的数据类型，除了返回数据类型，还可以返回函数function,返回的值是字符串（注意大小写，字符类型首字母是大写，返回的值首字母是小写）</li>
+			<li>Undefined：Undefined只有一个值undefined，它不需要特别去初始化，因为任何变量未初始化的值都是undefined，Undefined类型是为了区别未经初始化的变量类型和空对象类型Null,未经初始化的变量类型和不存在的变量类型是一样的，都是undefined，但他们的值是不一样的，当输出不存在的变量的值浏览器会报错is not defined</li>
+			<li>Null：Null只有一个值null，它表示一个空对象，用typeof检测会返回object类型，在变量初始化时，有可能不知道要初始化什么，所以就先给一个null值，遵循“只要定义变量就必须初始化”的原则</li>
+			<li>Boolean:Boolean有两个值true和false，任何变量都可以用boolean()转型成布尔值，</li>
+			
+			<div class="boolean">
+				<table>
+					<caption>其他数据类型转换成boolean类型的规则</caption>
+					<tr>
+						<th>数据类型</th>
+						<th>转换为true值</th>
+						<th>转换为false值</th>
+					</tr>
+					<tr>
+						<td>Boolean</td>
+						<td>true</td>
+						<td>false</td>
+					</tr>
+					<tr>
+						<td>String</td>
+						<td>非空字符串</td>
+						<td>空字符串</td>
+					</tr>
+					<tr>
+						<td>Number</td>
+						<td>非零数字值和无穷大</td>
+						<td>0和NaN</td>
+					</tr>
+					<tr>
+						<td>Object</td>
+						<td>任何对象</td>
+						<td>null</td>
+					</tr>
+					<tr>
+						<td>Undefined</td>
+						<td>-</td>
+						<td>undefined</td>
+					</tr>
+				</table>
+			</div>
+			
+			<li>Number：Number类型包括整型和浮点型</li>
+			
+			<div class="number">
+				<table>
+					<caption>Number的数字类型和实例</caption>
+					<tr>
+						<th>数字类型</th>
+						<th>实例</th>
+					</tr>
+					<tr>
+						<td>十进制</td>
+						<td>250</td>
+					</tr>
+					<tr>
+						<td>八进制（以0开头）</td>
+						<td>070</td>
+					</tr>
+					<tr>
+						<td>十六进制（以0x开头，0~9，a~f）</td>
+						<td>0xA</td>
+					</tr>
+					<tr>
+						<td>浮点型</td>
+						<td>3.8</td>
+					</tr>
+					<tr>
+						<td>科学计数法</td>
+						<td>10e</td>
+					</tr>
+				</table>
+			</div>
+			<li>String</li>
+			<li>Object:用{}或new Object创建空的对象，空的对象不等于空对象，空对象是null</li>
+			
+		</ul>
+	
+		<!--<p>ECMAscript-语法部分</p>
+		<p>文档对象模型-DOM</p>
+		<p>浏览器对象模型-BOM</p>
+		-->
+	</body>
+</html>
