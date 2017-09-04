@@ -7,6 +7,7 @@
 			body{
 				font-family: "微软雅黑";
 				line-height: 40px;
+				margin-left:30px;
 			}
 			h2{
 				color:red;
@@ -14,7 +15,7 @@
 			span{
 				color:red;
 				font-weight: bold;
-			}
+			}	
 			
 			li{
 				font-size: 18px;
@@ -45,6 +46,12 @@
 			.number table tr:first-child th:first-child{
 				/*background-color: red;*/
 				width:300px;
+			}
+			
+			/*class="string"样式*/
+			.string table{
+				position: relative;
+				left:-20px;;
 			}
 		</style>
 	</head>
@@ -79,8 +86,8 @@
 			<li>typeof操作符：用来检测变量或常量的数据类型，除了返回数据类型，还可以返回函数function,返回的值是字符串（注意大小写，字符类型首字母是大写，返回的值首字母是小写）</li>
 			<li>Undefined：Undefined只有一个值undefined，它不需要特别去初始化，因为任何变量未初始化的值都是undefined，Undefined类型是为了区别未经初始化的变量类型和空对象类型Null,未经初始化的变量类型和不存在的变量类型是一样的，都是undefined，但他们的值是不一样的，当输出不存在的变量的值浏览器会报错is not defined</li>
 			<li>Null：Null只有一个值null，它表示一个空对象，用typeof检测会返回object类型，在变量初始化时，有可能不知道要初始化什么，所以就先给一个null值，遵循“只要定义变量就必须初始化”的原则</li>
+		<!--Boolean类型开头-->
 			<li>Boolean:Boolean有两个值true和false，任何变量都可以用boolean()转型成布尔值，</li>
-			
 			<div class="boolean">
 				<table>
 					<caption>其他数据类型转换成boolean类型的规则</caption>
@@ -116,9 +123,35 @@
 					</tr>
 				</table>
 			</div>
-			
-			<li>Number：Number类型包括整型和浮点型</li>
-			
+		<!--Number类型开头-->
+			<li>Number：Number类型包括整型和浮点型，浮点型最高是17位小数，可能导致不精确，用Number.MAX_VALUE和Number.MIN_VALUE可求出浮点型的最小值和最大值，超出范围会出现正无穷infinity或负无穷-infinity，可以用isFinite()判断是否超过范围，true就是没有超过，false就是超过了</li>
+				<ul>
+					<li>NaN:not a number假如要返回的数值有错误，其他语言本来应该要停止执行，抛出错误，但是js会返回NaN这个值，从而不影响程序执行，例如其他语言任何数字除以0都会抛出错误，停止运行，但是js会抛出NaN，可以用number.NaN得到NaN这个值,任何与NaN进行运算的结果都得到NaN,可以用isNaN()这个函数来判断某个值是不是NaN，NaN不是一个数值</li>
+					<li>Number()可以把任何类型转换为数值</li>
+						<ul>
+							<li>Number(true)会得到返回值1,Number(false)会得到返回值0</li>
+							<li>Number(25)会直接返回数值25（直接转成10进制），浮点型也会直接返回值，如果是空的就直接返回0，如果不是数字类型就返回NaN</li>
+							<li>Number(null)会返回0</li>
+							<li>Number(undefined)会返回NaN</li>
+						</ul>
+					<li>parseInt()转换数据类型为字符串的数字,返回一个整数，<span>方式是parseInt(string)</span></li>
+						<ul>
+							<li>如果第一位开始不是数值，就返回NaN</li>
+							<li>如果第一位开始是数值，就返回整数部分，只返回连续的部分，不连续的部分会被省略</li>
+							<li>如果数值中出现小数点会被省略</li>
+							<li>如果值是空的，则返回NaN</li>
+							<li>可以返回十六进制、八进制和二进制</li>
+							<li>十六进制和八进制在逗号后注明某进制，可以省略0x，例如parseInt("AF",16)就等于parseInt("0xAF")，parseInt("70",8)就等于parseInt("070")</li>
+						</ul>	
+					<li>parseFloat()转换数据类型为浮点的数字，<span>方法是parseFloat(string)</span></li>
+						<ul>
+							<li>可以识别整数,可以识别parseFloat("123")</li>
+							<li>不识别16进制数,理论上8进制和2进制也不能识别，返回值为parseFloat("AF",16)</li>
+							<li>不管有多少个小数点只认一个小数点，在这个例子中parseFloat("123.4.6")返回值为123.4</li>
+							<li>前后有无关的内容会被省略,在这个例子中parseFloat(000123.456000lee)返回值为123.456</li>
+							<li>可把科学计数法的数字转换为普通数字,在这个例子中parseFloat("9e+2")返回值为900</li>
+						</ul>
+				</ul>
 			<div class="number">
 				<table>
 					<caption>Number的数字类型和实例</caption>
@@ -144,15 +177,89 @@
 					</tr>
 					<tr>
 						<td>科学计数法</td>
-						<td>10e</td>
+						<td>4.12e3</td>
 					</tr>
 				</table>
 			</div>
-			<li>String</li>
-			<li>Object:用{}或new Object创建空的对象，空的对象不等于空对象，空对象是null</li>
-			
+	<!--String开头-->			
+			<li>String：由0或多个16位Unicode字符串组成的字序列，字符串用单引号或双引号表示</li>
+				<ul>
+					<li>string包含了特殊字符的常量，也叫转义序列</li>
+						<div class="string">
+						<table>
+							<caption>String的一些特殊常量</caption>
+							<tr>
+								<th>常量名</th>
+								<th>含义</th>
+							</tr>
+							<tr>
+								<td>/n</td>
+								<td>换行</td>
+							</tr>
+							<tr>
+								<td>/t</td>
+								<td>插入一个tab键的距离</td>
+							</tr>
+							<tr>
+								<td>/b</td>
+								<td>插入一个空格的距离</td>
+							</tr>
+							<tr>
+								<td>/r</td>
+								<td>插入一个回车</td>
+							</tr>
+							<tr>
+								<td>//</td>
+								<td>插入一个斜杠</td>
+							</tr>
+							<tr>
+								<td>/'和/"</td>
+								<td>插入一个引号</td>
+							</tr>
+						</table>
+						</div>	
+					<li>toString()可以把值转换成字符串，<span>方法是number.toString(radix)</span>，toString()在转换时可以改变进制后输出成字符串,例如var box=10 alert(box.toString(2))</li>
+					<li>toString()不可以转换null和undefined，但String()可以将任何类型的值转换为字符串，方法是<span>String(object)</span></li>
+				</ul>
+				
+			<li>Object:用{}或new Object创建空的对象（空的对象不等于空对象，空对象是null）可以使用new操作符来创建任何类型的对象</li>
+				<ul>
+					<li>Object()可以输出数值，字符串，布尔值</li>
+					<li>new Number(60)是输出一个数值对象（仍然是对象）</li>
+				</ul>
 		</ul>
-	
+	<ul>
+		<h2>关于运算符</h2>
+		<li>一元运算符</li>
+			<ul>
+				<h3>++和++在计算变量本体时就是累加作用，但在变量与变量的赋值中有点不同</h3>
+				<!--具体参照一下script.js 从59-68行，先赋值还是后赋值的问题-->
+				<li>++box，等于box本身先+1，然后再赋值给其他变量</li>
+				<li>--box，等于box本身先-1，然后再赋值给其他变量</li>
+				<li><span>box++，先把box赋值给变量，然后box本身+1</span></li>
+				<li>box--，先把box赋值给变量，然后box本身-1</li>
+				<h3>++和--在对象中使用时，要运用valueOf和toString方法</h3>
+				<!--具体参照script.js 从78-84行-->
+				<li>++和--在变量和常量上使用时，如果遇到非数字，则会返回NaN</li>
+				<li>在对象中使用时，要使用valueOf和toString方法</li>
+				<h3>+和-运算符</h3>
+				<li>+box和-box是取正取负</li>
+			</ul>
+		<li>算术运算符</li>
+		<ul>
+			<li>数值+数值等于数值</li>
+			<li>数值+NaN等于NaN</li>
+			<li>infinity+infinity等于infinity</li>
+			<li>-infinity+-infinity等于-infinity</li>
+			<li>infinity+-infinity等于NaN</li>
+			<li>数字+字符串等于字符串，等号变为字符串连接符</li>
+			<!--具体参照script.js 从95-98行-->
+			<li>计算的优先级从左往右，和数学优先级类似</li>
+			<!--具体参照script.js 从99-100行-->		
+		</ul>
+		<li></li>
+		
+	</ul>
 		<!--<p>ECMAscript-语法部分</p>
 		<p>文档对象模型-DOM</p>
 		<p>浏览器对象模型-BOM</p>
