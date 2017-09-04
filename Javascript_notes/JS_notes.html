@@ -23,6 +23,9 @@
 				margin-bottom:10px;
 				margin:5px 50px;
 			}
+			h3{
+				font-size: 18px;
+			}
 			
 			/*table通用样式*/
 			table{
@@ -247,16 +250,67 @@
 			</ul>
 		<li>算术运算符</li>
 		<ul>
-			<li>数值+数值等于数值</li>
-			<li>数值+NaN等于NaN</li>
-			<li>infinity+infinity等于infinity</li>
-			<li>-infinity+-infinity等于-infinity</li>
-			<li>infinity+-infinity等于NaN</li>
+			<li>数值+/-/*/÷数值=数值</li>
+			<li>数值+/-/*/÷NaN=NaN</li>
 			<li>数字+字符串等于字符串，等号变为字符串连接符</li>
 			<!--具体参照script.js 从95-98行-->
 			<li>计算的优先级从左往右，和数学优先级类似</li>
-			<!--具体参照script.js 从99-100行-->		
+			<!--具体参照script.js 从99-100行-->	
+			<li>在对象中使用时，要使用valueOf和toString方法</li>
+			<!--具体参照script.js 从103-108行-->
+			<li>和true计算会转换成1，和false计算会转换成0，和空的字符串计算会转换成0，和null计算会转换成0</li>
+			<li>减法、乘法、除法会把字符串内的数字自动转化为Number类型，若字符串内不是数字则返回NaN</li>
 		</ul>
+		<li>用于进行比较的关系运算符</li>
+			<ul>
+				<h3>关系运算符大多返回的是布尔值</h3>
+				<li>两个都是数值，则进行数值比较</li>
+				<li>有一个是字符串，则会将字符串转换成数值再比较</li>
+				<li>两个都是数字字符串，则会比较第一个字符的大小</li>
+				<li>两个数值中有一个是对象，则先把对象中valueOf()和toString()返回的值计算出来，再进行比较</li>
+				<li>布尔值会转换成数值再进行比较</li>
+				<li>两个都是不为数值的字符串，则比较二者的ASCII码</li>
+				<li>只要和NaN相关的都不相等</li>
+				<li>两个对象相比的是地址，每个对象的地址都不相同，因此不同对象都不会相等</li>
+				<li>字符串在比较时会自动转换，但null和undefined不会自动转换</li>
+				<!--具体参照script.js 从118-128行-->
+			</ul>
+		<li>逻辑运算符AND、OR和NOT</li>
+			<ul>
+				<li>AND使用&&，必须两边都是true，才能返回true，只要有一边是false，则返回false</li>
+					<ul>
+						<li>若第一个操作数是对象，则直接返回第二个操作数</li>
+						<!--具体参照script.js 从139-143行-->
+						<li>第一个操作数必须返回true，才返回第二个操作数的判断结果，否则不计算第二个操作数的值，且返回false</li>
+						<!--具体参照script.js 从148-152行-->
+						<li>有一个操作数是null，则返回null</li>
+						<li>有一个操作数是undefined，则返回undefined</li>
+					</ul>
+				<li>OR使用||，只要一边是true就返回true</li>
+					<ul>
+						<li>第一个操作数是对象，则返回第一个操作数</li>
+						<!--具体参照script.js 从155行-->
+						<li>两个操作数都是对象，则返回第一个操作数</li>
+						<!--具体参照script.js 从164行-->
+						<li>第一个操作数是true，不返回第二个操作数，第一个操作数结果为false才返回第二个操作数</li>
+						<!--具体参照script.js 从157行-->
+						<li>两个都是null,undefined,NaN则返回相同的值</li>
+						<li>把其中一个有效变量赋给box</li>
+						<!--具体参照script.js 从179行-->
+					</ul>
+				</li>
+				<li>NOT使用！，无论任何数据类型都会返回一个布尔值，NOT的本质是先把这个值转换成布尔值，然后再取反</li>
+				<ul>
+					<li>如果使用在对象上，则直接返回false</li>
+					<!--具体参照script.js 从183行-->
+					<li>空的字符串等于0，0等于false，再取反等于true</li>
+					<li>字符串取反等于false</li>
+					<li>null,undefined,NaN取反都是true</li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</ul>
 		<li></li>
 		
 	</ul>
