@@ -301,18 +301,187 @@
 				</li>
 				<li>NOT使用！，无论任何数据类型都会返回一个布尔值，NOT的本质是先把这个值转换成布尔值，然后再取反</li>
 				<ul>
-					<li>如果使用在对象上，则直接返回false</li>
+					<li>对象取反直接返回false</li>
 					<!--具体参照script.js 从183行-->
 					<li>空的字符串等于0，0等于false，再取反等于true</li>
-					<li>字符串取反等于false</li>
+					<li>字符串取反直接返回false</li>
 					<li>null,undefined,NaN取反都是true</li>
-					<li></li>
-					<li></li>
-					<li></li>
 				</ul>
 			</ul>
-		<li></li>
-		
+		<li>位运算符，针对操作数的二进制计算</li>
+		<ul>
+		<!--位运算原理参考http://www.w3school.com.cn/js/pro_js_operators_bitwise.asp-->
+		<li>位运算NOT，符号为~，位运算NOT实际上是对数字求负，然后减1（原理上负数是要对数字的二进制进行反码处理，但JS，为了避免开发者访问位31，未使用二进制补码，而是使用了数字绝对值前面加负号）</li>
+		<!--具体参照script.js 从185-186行-->
+		<li>位运算AND，符号为&，位运算AND是把两个数字的二进制进行上下比较</li>
+		<!--具体参照script.js 从189-190行-->
+		<li>位运算OR，符号为|，位运算OR是把两个数字的二进制进行上下比较</li>
+		<!--具体参照script.js 从198-199行-->
+		<li>位运算XOR，符号为^，位运算XOR是把两个数字的二进制进行上下比较</li>
+		<!--具体参照script.js 从209-210行-->
+		<li>左移运算，符号为<<，它把数字中的所有数位向左移动指定的数量</li>
+		<!--具体参照script.js 从219-220行-->
+		<li>有符号右移运算符号位>>，W3C资料不明</li>
+		</ul>
+		<li>赋值运算符</li>
+		<ul>
+			<li>= 把右边的值赋给左边的变量</li>
+			<li>x+=y 等于x=x+y</li>
+			<li>x-=y 等于x=x-y</li>
+			<li>x*=y 等于x=x*y</li>
+			<li>x/=y 等于x=x/y</li>
+			<li>x%=y 等于x=x%y</li>
+			<!--具体参照script.js 从225-231行-->
+			<li>字符串运算符 + 只要有字符串的，就以字符串相连</li>
+		</ul>
+		<li>逗号运算符</li>
+			<ul>
+				<li>多个变量进行声明</li>
+				<!--具体参照script.js 从234-235行-->
+				<li>数组声明</li>
+				<!--具体参照script.js 从237-238行-->
+				<li>对象声明</li>
+				<!--具体参照script.js 从245-250行-->
+			</ul>
+		<li>三元运算符</li>
+			<ul>
+				<li>if...else使用..?..:</li>
+				<!--具体参照script.js 从253-264行-->
+			</ul>
+	</ul>
+	<ul>
+		<h2>流程运算符</h2>
+		<li>语句的定义</li>
+		<div class="sentence">
+			<table>
+				<tr>
+					<th>类型</th>
+					<th>子类型</th>
+					<th>语法</th>
+				</tr>
+				<tr>
+					<td rowspan="2">声明语句</td>
+					<td>变量声明语句</td>
+					<td>var box=100</td>
+				</tr>
+				<tr>
+					<td>标签声明语句</td>
+					<td>label:box</td>
+				</tr>
+				<tr>
+					<td rowspan="4">表达式语句</td>
+					<td>变量赋值语句</td>
+					<td>box=3</td>
+				</tr>
+				<tr>
+					<td>函数调用语句</td>
+					<td>box()</td>
+				</tr>
+				<tr>
+					<td>属性赋值语句</td>
+					<td>box.property=100</td>
+				</tr>
+				<tr>
+					<td>方法调用语句</td>
+					<td>box.method()</td>
+				</tr>
+				<tr>
+					<td rowspan="2">分支语句</td>
+					<td>条件分支语句</td>
+					<td>if(...){...}else{...}</td>
+				</tr>
+				<tr>
+					<td>多重分支语句</td>
+					<td>switch(..){case:n..}</td>
+				</tr>
+				<tr>
+					<td rowspan="4">循环语句</td>
+					<td>for</td>
+					<td>for(;;;){...}</td>
+				</tr>
+				<tr>
+					<td>for in</td>
+					<td>for(x in x){...}</td>
+				</tr>
+				<tr>
+					<td>while</td>
+					<td>while(...){...}</td>
+				</tr>
+				<tr>
+					<td>do while</td>
+					<td>do{...}while(...)</td>
+				</tr>
+				<tr>
+					<td rowspan="5">控制结构</td>
+					<td>继续执行子句</td>
+					<td>continue;</td>
+				</tr>
+				<tr>
+					<td>终端执行子句</td>
+					<td>break;</td>
+				</tr>
+				<tr>
+					<td>函数返回子句</td>
+					<td>return;</td>
+				</tr>
+				<tr>
+					<td>异常触发子句</td>
+					<td>throw;</td>
+				</tr>
+				<tr>
+					<td>异常捕获与处理</td>
+					<td>try{..}catch(..){..}finally{..}</td>
+				</tr>
+				<tr>
+					<td rowspan="2">其他</td>
+					<td>空语句</td>
+					<td>;</td>
+				</tr>
+				<tr>
+					<td>with语句</td>
+					<td>with(..){..}</td>
+				</tr>
+			</table>
+		</div>
+		<li>if语句,一般用于比较大于小于</li>
+		<ul>
+			<li>只有if，没有else</li>
+			<!--Line:273-->
+			<li>if...else</li>
+			<!--Line:298-303-->
+			<li>多重分支if...else if...else if...else</li>
+			<!--Line:305-314-->
+		</ul>
+		<li>switch语句，一般用于多个相同的值比较</li>
+		<ul>
+			<li>switch(变量名){case n:...;}</li>
+			<!--Line:316-324-->
+		</ul>
+		<li>do{执行语句}while(条件)</li>
+		<!--Line328-332-->
+		<li>while(条件){执行语句}</li>
+		<!--Line337-341-->
+		<li>for(声明变量；增加判断，判断为true的执行){..}</li>
+		<!--Line346-348-->
+		<li>for(条件){执行语句}</li>
+		<!--Line352-359-->
+		<li>break;立即退出循环，执行循环后的语句，break只能用在循环和switch中</li>
+		<!--Line:365-370-->
+		<li>continue;退出当前循环，执行下一个循环</li>
+		<!--Line:373-378-->
+		<li>with用于对象</li>
+	</ul>
+	<ul>
+		<h2>函数</h2>
+		<li>函数的基本格式function 函数名(参数){函数体}，声明函数的方法请看注释</li>
+		<!--Line:391-396-->
+		<li>return返回值</li>
+		<!--Line:418-422-->
+		<li>arguments对象</li>
+		<!--Line:446-457-->
+		<ul>
+			<li></li>
+		</ul>
 	</ul>
 		<!--<p>ECMAscript-语法部分</p>
 		<p>文档对象模型-DOM</p>
