@@ -26,13 +26,20 @@
 			h3{
 				font-size: 18px;
 			}
-			
+			/*pre{
+				font-size:14px;
+				background-color: #eee;
+				font-family: arial;
+				letter-spacing: 2px;
+				line-height: 2;
+			}
+			*/
 			/*table通用样式*/
 			table{
 				margin:0 auto;
 				border:1px solid black;
 				text-align: center;
-				width:600px;
+				width:700px;
 				margin-bottom: 10px;
 				border-collapse:collapse
 			}
@@ -86,11 +93,12 @@
 		<ul>
 			<h2>关于数据类型</h2>
 			<li>ECMAscript不能创建自定义数据类型</li>
+			<li>ECMAscript有三种强制转换数据类型的方法：boolean()，number()和string()</li>
 			<li>typeof操作符：用来检测变量或常量的数据类型，除了返回数据类型，还可以返回函数function,返回的值是字符串（注意大小写，字符类型首字母是大写，返回的值首字母是小写）</li>
 			<li>Undefined：Undefined只有一个值undefined，它不需要特别去初始化，因为任何变量未初始化的值都是undefined，Undefined类型是为了区别未经初始化的变量类型和空对象类型Null,未经初始化的变量类型和不存在的变量类型是一样的，都是undefined，但他们的值是不一样的，当输出不存在的变量的值浏览器会报错is not defined</li>
 			<li>Null：Null只有一个值null，它表示一个空对象，用typeof检测会返回object类型，在变量初始化时，有可能不知道要初始化什么，所以就先给一个null值，遵循“只要定义变量就必须初始化”的原则</li>
 		<!--Boolean类型开头-->
-			<li>Boolean:Boolean有两个值true和false，任何变量都可以用boolean()转型成布尔值，</li>
+			<li>Boolean:Boolean有两个值true和false，任何变量都可以用boolean()（这是一种强制转换类型）转型成布尔值，</li>
 			<div class="boolean">
 				<table>
 					<caption>其他数据类型转换成boolean类型的规则</caption>
@@ -130,20 +138,20 @@
 			<li>Number：Number类型包括整型和浮点型，浮点型最高是17位小数，可能导致不精确，用Number.MAX_VALUE和Number.MIN_VALUE可求出浮点型的最小值和最大值，超出范围会出现正无穷infinity或负无穷-infinity，可以用isFinite()判断是否超过范围，true就是没有超过，false就是超过了</li>
 				<ul>
 					<li>NaN:not a number假如要返回的数值有错误，其他语言本来应该要停止执行，抛出错误，但是js会返回NaN这个值，从而不影响程序执行，例如其他语言任何数字除以0都会抛出错误，停止运行，但是js会抛出NaN，可以用number.NaN得到NaN这个值,任何与NaN进行运算的结果都得到NaN,可以用isNaN()这个函数来判断某个值是不是NaN，NaN不是一个数值</li>
-					<li>Number()可以把任何类型转换为数值</li>
+					<li>Number()（这是一种强制转换类型）方法可以把任何类型转换为数值</li>
 						<ul>
 							<li>Number(true)会得到返回值1,Number(false)会得到返回值0</li>
 							<li>Number(25)会直接返回数值25（直接转成10进制），浮点型也会直接返回值，如果是空的就直接返回0，如果不是数字类型就返回NaN</li>
 							<li>Number(null)会返回0</li>
 							<li>Number(undefined)会返回NaN</li>
 						</ul>
-					<li>parseInt()转换数据类型为字符串的数字,返回一个整数，<span>方式是parseInt(string)</span></li>
+					<li>parseInt()可以把数据类型为字符串的内容转换成数字,返回一个整数，<span>方式是parseInt(string)</span></li>
 						<ul>
 							<li>如果第一位开始不是数值，就返回NaN</li>
-							<li>如果第一位开始是数值，就返回整数部分，只返回连续的部分，不连续的部分会被省略</li>
+							<li>如果第一位开始是数值，就返回整数部分，然后检测第二位，直到不是数值的一位停止输出</li>
 							<li>如果数值中出现小数点会被省略</li>
 							<li>如果值是空的，则返回NaN</li>
-							<li>可以返回十六进制、八进制和二进制</li>
+							<li>可以解析十六进制、八进制和二进制，然后返回十进制，例如parseInt('0xA')返回十进制数10</li>
 							<li>十六进制和八进制在逗号后注明某进制，可以省略0x，例如parseInt("AF",16)就等于parseInt("0xAF")，parseInt("70",8)就等于parseInt("070")</li>
 						</ul>	
 					<li>parseFloat()转换数据类型为浮点的数字，<span>方法是parseFloat(string)</span></li>
@@ -154,6 +162,7 @@
 							<li>前后有无关的内容会被省略,在这个例子中parseFloat(000123.456000lee)返回值为123.456</li>
 							<li>可把科学计数法的数字转换为普通数字,在这个例子中parseFloat("9e+2")返回值为900</li>
 						</ul>
+					<li>isFinite()和isNaN()判断是否无穷大和判断是否NaN</li>
 				</ul>
 			<div class="number">
 				<table>
@@ -221,8 +230,8 @@
 							</tr>
 						</table>
 						</div>	
-					<li>toString()可以把值转换成字符串，<span>方法是number.toString(radix)</span>，toString()在转换时可以改变进制后输出成字符串,例如var box=10 alert(box.toString(2))</li>
-					<li>toString()不可以转换null和undefined，但String()可以将任何类型的值转换为字符串，方法是<span>String(object)</span></li>
+					<li>toString()可以把布尔值、数字转换成字符串，<span>方法是number.toString(radix)</span>，toString()在转换时可以改变进制后输出成字符串,例如var box=10 alert(box.toString(2))</li>
+					<li>toString()不可以转换null和undefined，但String()（这是一种强制转换类型）可以将任何类型的值转换为字符串，方法是<span>String(object)</span></li>
 				</ul>
 				
 			<li>Object:用{}或new Object创建空的对象（空的对象不等于空对象，空对象是null）可以使用new操作符来创建任何类型的对象</li>
@@ -237,9 +246,9 @@
 			<ul>
 				<h3>++和++在计算变量本体时就是累加作用，但在变量与变量的赋值中有点不同</h3>
 				<!--具体参照一下script.js 从59-68行，先赋值还是后赋值的问题-->
-				<li>++box，等于box本身先+1，然后再赋值给其他变量</li>
+				<li>++box，等于box本身先+1(先自增再赋值）)，然后再赋值给其他变量</li>
 				<li>--box，等于box本身先-1，然后再赋值给其他变量</li>
-				<li><span>box++，先把box赋值给变量，然后box本身+1</span></li>
+				<li><span>box++，先把box赋值给变量（先赋值再自增），然后box本身+1</span></li>
 				<li>box--，先把box赋值给变量，然后box本身-1</li>
 				<h3>++和--在对象中使用时，要运用valueOf和toString方法</h3>
 				<!--具体参照script.js 从78-84行-->
@@ -444,32 +453,49 @@
 			</table>
 		</div>
 		<li>if语句,一般用于比较大于小于</li>
-		<ul>
-			<li>只有if，没有else</li>
-			<!--Line:273-->
-			<li>if...else</li>
-			<!--Line:298-303-->
-			<li>多重分支if...else if...else if...else</li>
-			<!--Line:305-314-->
-		</ul>
-		<li>switch语句，一般用于多个相同的值比较</li>
-		<ul>
-			<li>switch(变量名){case n:...;}</li>
-			<!--Line:316-324-->
-		</ul>
-		<li>do{执行语句}while(条件)</li>
+			<ul>
+				<li>只有if，没有else</li>
+				<!--Line:273-->
+				<li>if...else</li>
+				<!--Line:298-303-->
+				<li>多重分支if...else if...else if...else</li>
+				<!--Line:305-314-->
+			</ul>
+		<li>switch语句，switch基于不同的条件来执行不同的动作,表达式的值会与结构中的每个 case 的值做比较。如果存在匹配，则与该 case 关联的代码块会被执行</li>
+			<ul>
+				<li>语法：switch(变量名){<br />
+					case 1:执行动作;<br />
+					case 2:执行动作;<br />
+					case n:执行动作;<br />
+					default:执行动作} </li>
+				<li>default:来规定匹配不存在时做的事情</li>
+				<!--Line:316-324-->
+			</ul>
+		<li>do..while语句，先执行一次代码，然后再检查条件是否为真，如果为真则重复这个循环</li>
+			<ul>
+				<li>语法：do{执行语句}while(条件)</li>
+			</ul>
 		<!--Line328-332-->
-		<li>while(条件){执行语句}</li>
+		<li>while语句，先判断，再执行循环体</li>
+			<ul>
+				<li>while(条件){执行语句}</li>
+			</ul>
 		<!--Line337-341-->
-		<li>for(声明变量；增加判断，判断为true的执行){..}</li>
+		<li>for语句只要判断条件为true就会一直执行,直到判断条件为false</li>
+			<ul>
+				<li>for(声明变量和初始化；定义循环的条件，判断为true的执行规则){执行行为}</li>
+				<li>for(这里的三个参数可以省略，但不能省略；号)</li>
+			</ul>
 		<!--Line346-348-->
-		<li>for(条件){执行语句}</li>
+		<li>for in for/in 语句用于循环对象属性。循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作</li>
+			<ul>
+				<li>for in语句：for(变量 in 对象){执行语句}</li>
+			</ul>
 		<!--Line352-359-->
 		<li>break;立即退出循环，执行循环后的语句，break只能用在循环和switch中</li>
 		<!--Line:365-370-->
-		<li>continue;退出当前循环，执行下一个循环</li>
+		<li>continue;跳过当前条件，继续执行</li>
 		<!--Line:373-378-->
-		<li>with用于对象</li>
 	</ul>
 	<ul>
 		<h2>函数</h2>
@@ -478,10 +504,363 @@
 		<li>return返回值</li>
 		<!--Line:418-422-->
 		<li>arguments对象</li>
-		<!--Line:446-457-->
-		<ul>
-			<li></li>
-		</ul>
+		<!--Line:425-435-->
+		<!--关于自动获取arguments数量的方法 Line:438-446-->
+		<li>JS的函数不会重载，即不会选择相同参数数量的函数，新的函数会覆盖掉旧的汉服</li>
+	</ul>
+	<ul>
+		<h2>对象和数组</h2>
+		<li>对象是一种引用类型，是一种类，引用类型和值的不同</li>
+		<!--Line566-575-->
+		<li>Object类型</li>
+			<ul>
+				<li>创建对象{}、创建属性，不同的表达方法(实际开发更喜欢用字面量的方法)</li>
+				<!--Line:433-455-->
+				<li>对象封装数据</li>
+				<!--Line:442-448-->
+				<li>把函数赋值给对象属性</li>
+				<!--Line:467-483-->
+				<li>删除对象</li>
+				<!--Line:455-->
+				<li>匿名对象，只是用来传参</li>
+			</ul>
+		<li>数组也是一种引用类型</li>
+		<li>Array类型</li>
+			<ul>
+				<li>创建数组[]，给数组分配元素</li>
+				<!--Line:491-->
+				<li>length获取数组的元素量</li>
+				<!--Line:516-->
+				<li>创建复杂的数组</li>
+			</ul>
+		<li>对象和数组中的方法</li>
+			<ul>
+				<li>对象和数组都拥有toString()，valueOf()和toLocaleString()方法</li>
+				<!--Line:540-543-->
+				<li>join()方法更改连接符</li>
+				<!--Line:545-->
+				<li>栈的后进先出方法，在数组末尾增加元素push(),并输出数组长度,pop()在数组末端移除元素，并返回移除的元素值</li>
+				<li>队列的先进先出方法，在数组前端增加元素unshift()，并输出数组长度，shift()在数组前端移除元素，并返回移除的元素值</li>
+				<!--Line:547-558-->
+				<li>数组的排序方法从小到大排序sort()和逆向排序reserve()</li>
+				<!--Line:565-577-->
+				<li>基于原来的数组，再创建一个新的数组concat()</li>
+				<!--Line:590-594-->
+				<li>基于原来数组的指定区域，再创建一个新的数组slice()</li>
+				<!--Line:596-->
+				<li>基于原来的数组，在数组内删除或替换元素元素splice()</li>
+				<!--Line:606-609-->
+			</ul>
+		<li>时间和日期</li>
+			<ul>
+				<li>创建Date类型，使用Date.parse()和Date.UTC()</li>
+				<!--Line:614-637-->
+				<li>用toString()，valueOf()和toLocaleString()三个通用方法</li>
+			</ul>
+	</ul>
+	<ul>
+		<h2>正则表达式</h2>
+		<li>ECMAscript中的RegExp表示正则表达式</li>
+		<li>创建正则表达式</li>
+			<table>
+				<caption>模式修饰符的可选参数</caption>
+				<tr>
+					<th>参数</th>
+					<th>含义</th>
+				</tr>
+				<tr>
+					<td>i</td>
+					<td>忽略大小写</td>
+				</tr>
+				<tr>
+					<td>g</td>
+					<td>全局匹配</td>
+					<!--(普通的匹配方式是只匹配到1个就停止，全局匹配是指在全文匹配到无法匹配为止)-->
+				</tr>
+				<tr>
+					<td>m</td>
+					<td>多行匹配</td>
+				</tr>
+			</table>
+		<li>如何测试正则表达式test()和exec()</li>
+		<!--Line:713-719-->
+			<table>
+				<caption>正则表达式的两个测试方法</caption>
+				<tr>
+					<th>方法</th>
+					<th>作用</th>
+				</tr>
+				<tr>
+					<td>test()</td>
+					<td>查找是否有匹配的内容，返回true或false</td>
+				</tr>
+				<tr>
+					<td>exec()</td>
+					<td>查找是否有匹配的内容，有则以数组的形式返回字符串,没有返回null</td>
+				</tr>
+			</table>
+		<li>字符串的四个方法match(),replace(),search(),split()</li>
+		<!--Line:722-743-->
+			<table>
+				<caption>正则在字符串中的四个方法</caption>
+				<tr>
+					<th>方法</th>
+					<th>作用</th>
+				</tr>
+				<tr>
+					<td>match()</td>
+					<td>将所有匹配的字符串组合成数组返回</td>
+				</tr>
+				<tr>
+					<td>search()</td>
+					<td>查找并返回字符串的位置，否则返回-1</td>
+				</tr>
+				<tr>
+					<td>replace()</td>
+					<td>替换掉字符串的内容</td>
+				</tr>
+				<tr>
+					<td>split()</td>
+					<td>把一个字符串拆分为数组</td>
+				</tr>
+			</table>
+		<li>正则的静态属性RegExp.input，RegExp.leftContext，RegExp.rightContext，RegExp.lastMatch，RegExp.astParen</li>
+			<table>
+				<caption>正则的静态属性对应短名</caption>
+				<tr>
+					<th>属性</th>
+					<th>含义</th>
+					<th>短名</th>
+				</tr>
+				<tr>
+					<td>RegExp.input</td>
+					<td>输出当前被匹配的字符串</td>
+					<td>RegExp['$_']或RegExp.$_</td>
+				</tr>
+				<tr>
+					<td>RegExp.lastMatch</td>
+					<td>输出最后一个匹配的字符串</td>
+					<td>RegExp['$&']</td>
+				</tr>
+				<tr>
+					<td>RegExp.lastParen</td>
+					<td>输出最后一对圆括号内匹配字符串</td>
+					<td>RegExp['$+']</td>
+				</tr>
+				<tr>
+					<td>RegExp.leftContext</td>
+					<td>输出输出匹配到字符前的所有子串</td>
+					<td>RegExp['$`']</td>
+				</tr>
+				<tr>
+					<td>RegExp.rightContext</td>
+					<td>输出匹配到字符后的所有子串</td>
+					<td>RegExp['$'']</td>
+				</tr>
+			</table>
+	<li>正则的实例属性.global，.ignoreCase，.multiline，.source，.lastIndex</li>
+		<table>
+			<caption>正则的实例属性</caption>
+			<tr>
+				<th>属性</th>
+				<th>作用</th>
+			</tr>
+			<tr>
+				<td>.global</td>
+				<td>是否使用了全局</td>
+			</tr>
+			<tr>
+				<td>.ignoreCase</td>
+				<td>是否区分了大小写</td>
+			</tr>
+			<tr>
+				<td>.multiline</td>
+				<td>是否设置了多行匹配</td>
+			</tr>
+			<tr>
+				<td>.source</td>
+				<td>输出正则里面的源字符串</td>
+			</tr>
+			<tr>
+				<td>.lastIndex</td>
+				<td>表示下次匹配从哪个位置开始</td>
+			</tr>
+		</table>
+	<li>正则表达式获取控制</li>
+		<table class='yuanzifu'>
+			<caption>元字符</caption>
+			<tr>
+				<th>字符名</th>
+				<th>作用</th>
+			</tr>
+			<tr>
+				<td>.</td>
+				<td>查找任意单个字符，除了换行和行结束符</td>
+			</tr>
+			<tr>
+				<td>^</td>
+				<td>匹配不在范围内的字符</td>
+			</tr>
+			<tr>
+				<td>/w</td>
+				<td>匹配字母、数字及下划线</td>
+			</tr>
+			<tr>
+				<td>/W</td>
+				<td>匹配非字母、数字及下划线</td>
+			</tr>
+			<tr>
+				<td>/d</td>
+				<td>匹配数字</td>
+			</tr>
+			<tr>
+				<td>/D</td>
+				<td>匹配非数字</td>
+			</tr>
+			<tr>
+				<td>/s</td>
+				<td>匹配空白字符</td>
+			</tr>
+			<tr>
+				<td>/S</td>
+				<td>匹配非空白字符</td>
+			</tr>
+			<tr>
+				<td>/b</td>
+				<td>匹配边界</td>
+			</tr>
+		</table>
+		<table class='chongfuzifu'>
+			<caption>重复字符</caption>
+			<tr>
+				<th>字符名</th>
+				<th>作用</th>
+			</tr>
+			<tr>
+				<td>*</td>
+				<td>查找0个，1个或者多个x的字符串，等于{0,}</td>
+			</tr>
+			<tr>
+				<td>+</td>
+				<td>查找至少一个x的字符串，等同于{1,}</td>
+			</tr>
+			<tr>
+				<td>?</td>
+				<td>查找0个或1个字符串，等同于{0,1}</td>
+			</tr>
+			<tr>
+				<td>x{1,2}</td>
+				<td>查找最少1个，最多2个x字符串</td>
+			</tr>
+			<tr>
+				<td>^x</td>
+				<td>从行首开始匹配</td>
+			</tr>
+			<tr>
+				<td>x$</td>
+				<td>从行尾开始匹配</td>
+			</tr>
+		</table>
+		</table>
+		<table class='zifulei'>
+			<caption>字符类匹配</caption>
+			<tr>
+				<th>字符名</th>
+				<th>作用</th>
+			</tr>
+			<tr>
+				<td>[a-z]</td>
+				<td>26个小写字母都匹配,如果正则加上i就覆盖了大写字母</td>
+			</tr>
+			<tr>
+				<td>[A-Z]</td>
+				<td>26个大写字母都匹配,如果正则加上i就覆盖了小写字母</td>
+			</tr>
+			<tr>
+				<td>[0-9]</td>
+				<td>0-9的数字都匹配</td>
+			</tr>
+			<tr>
+				<td>[a-zA-Z0-9_]</td>
+				<td>复合匹配（等于\w）</td>
+			</tr>
+			<tr>
+				<td>(google|baidu|soso)</td>
+				<td>匹配三种之一字符串</td>
+			</tr>
+			<tr>
+				<td>(google){4,8}</td>
+				<td>匹配整个字符串4-8次</td>
+			</tr>
+		</table>
+		<li>正则表达式分组</li>
+			<ul>
+				<li>alert(RegExp.$1)获取表达式中第一个分组中的字符串</li>
+				<li>$1$2的用法</li>
+			</ul>
+		<li>贪婪和惰性</li>
+			<ul>
+				<li>a.*b，它将会匹配最长的以a开始，以b结束的字符串。如果用它来搜索aabab的话，它会匹配整个字符串aabab。这被称为贪婪匹配</li>
+				<li>a.*?b匹配最短的，以a开始，以b结束的字符串。如果把它应用于aabab的话，它会匹配aab（第一到第三个字符）和ab（第四到第五个字符）</li>
+			</ul>
+		<!--http://www.runoob.com/w3cnote/regular-expression-30-minutes-tutorial.html-->
+			 <table>
+			 	<caption>贪婪的惰性符号</caption>
+			 	<tr>
+			 		<td>贪婪</td>
+			 		<td>惰性</td>
+			 	</tr>
+			 	<tr>
+			 		<td>+</td>
+			 		<td>+?</td>
+			 	</tr>
+			 	<tr>
+			 		<td>*</td>
+			 		<td>*?</td>
+			 	</tr>
+			 	<tr>
+			 		<td>{n,m}</td>
+			 		<td>{n,m}?</td>
+			 	</tr>
+			 	<tr>
+			 		<td>{n,}</td>
+			 		<td>{n,}?</td>
+			 	</tr>
+			 </table>
+		<li>用分组捕获（具体看js）</li>
+		<li>常用正则</li>
+			<ul>
+				<li>先把标准的字符串写出来，然后再根据字符串写正则</li>
+				<table>
+					<caption>常用正则表达式</caption>
+					<tr>
+						<th>作用</th>
+						<th>写法</th>
+					</tr>
+					<tr>
+						<td>验证邮政编码</td>
+						<td>/[0-9][1-9]{5}/</td>
+					</tr>
+					<tr>
+						<td>验证文件名</td>
+						<td>/\w+\.zip|rar\7z/</td>
+					</tr>
+					<tr>
+						<td>删除多余空格</td>
+						<td>/\s/g</td>
+					</tr>
+					<tr>
+						<td>删除前后空格</td>
+						<td>/^\s+(.*)\s+$/</td>
+					</tr>
+					<tr>
+						<td>验证电子邮件</td>
+						<td>/^([\w\.\-]+)@([\w\-]+cn|com/</td>
+					</tr>
+				</table>
+			</ul>
+			<h2>function类型</h2>
+			<li>111</li>
 	</ul>
 		<!--<p>ECMAscript-语法部分</p>
 		<p>文档对象模型-DOM</p>
