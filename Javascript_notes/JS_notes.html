@@ -66,6 +66,18 @@
 		</style>
 	</head>
 	<body>
+		<!--数据类型-->
+		<!--https://pic4.zhimg.com/v2-a0fb41dc46067adcb8c074d395bdcff3_b.jpg-->
+		<!--运算符-->
+		<!--https://pic4.zhimg.com/v2-c97500afb7dcd1afd2d1d9c5e86680e3_b.jpg-->
+		<!--数组-->
+		<!--https://pic4.zhimg.com/v2-a0fb41dc46067adcb8c074d395bdcff3_b.jpg-->
+		<!--https://pic3.zhimg.com/v2-5c24f88d2ca6621324c302da9c138742_b.jpg-->
+		<!--正则表达式-->
+		<!--https://pic2.zhimg.com/v2-588368f605f8a17310009d12b0cf19dd_b.jpg-->
+		<!--字符串函数-->
+		<!--https://pic1.zhimg.com/v2-c76d82c08a81995651f1949143bf6950_b.jpg-->
+			
 		<ul>
 			<h2>Javascript的核心部分</h2>
 			<li>ECMAscript是核心语法</li>
@@ -92,6 +104,7 @@
 		</ul>
 		<ul>
 			<h2>关于数据类型</h2>
+			<!--https://pic2.zhimg.com/v2-65a7d6b83523d53232395285db0322ed_b.jpg-->
 			<li>ECMAscript不能创建自定义数据类型</li>
 			<li>ECMAscript有三种强制转换数据类型的方法：boolean()，number()和string()</li>
 			<li>typeof操作符：用来检测变量或常量的数据类型，除了返回数据类型，还可以返回函数function,返回的值是字符串（注意大小写，字符类型首字母是大写，返回的值首字母是小写）</li>
@@ -135,7 +148,7 @@
 				</table>
 			</div>
 		<!--Number类型开头-->
-			<li>Number：Number类型包括整型和浮点型，浮点型最高是17位小数，可能导致不精确，用Number.MAX_VALUE和Number.MIN_VALUE可求出浮点型的最小值和最大值，超出范围会出现正无穷infinity或负无穷-infinity，可以用isFinite()判断是否超过范围，true就是没有超过，false就是超过了</li>
+			<li>Number：Number类型包括整型和浮点型，浮点型最高是17位小数，可能导致不精确，用Number.MAX_VALUE和Number.MIN_VALUE可求出浮点型的最小值和最大值（Number的静态类型），超出范围会出现正无穷infinity或负无穷-infinity，可以用isFinite()判断是否超过范围，true就是没有超过，false就是超过了</li>
 				<ul>
 					<li>NaN:not a number假如要返回的数值有错误，其他语言本来应该要停止执行，抛出错误，但是js会返回NaN这个值，从而不影响程序执行，例如其他语言任何数字除以0都会抛出错误，停止运行，但是js会抛出NaN，可以用number.NaN得到NaN这个值,任何与NaN进行运算的结果都得到NaN,可以用isNaN()这个函数来判断某个值是不是NaN，NaN不是一个数值</li>
 					<li>Number()（这是一种强制转换类型）方法可以把任何类型转换为数值</li>
@@ -452,7 +465,7 @@
 				</tr>
 			</table>
 		</div>
-		<li>if语句,一般用于比较大于小于</li>
+		<li>if语句</li>
 			<ul>
 				<li>只有if，没有else</li>
 				<!--Line:273-->
@@ -463,28 +476,41 @@
 			</ul>
 		<li>switch语句，switch基于不同的条件来执行不同的动作,表达式的值会与结构中的每个 case 的值做比较。如果存在匹配，则与该 case 关联的代码块会被执行</li>
 			<ul>
-				<li>语法：switch(变量名){<br />
-					case 1:执行动作;<br />
-					case 2:执行动作;<br />
-					case n:执行动作;<br />
+				<li>语法：switch(条件表达式){<br />
+					case 标签1: 执行动作;<br />
+					break;
+					case 标签2: 执行动作;<br />
+					break;
+					case 标签n: 执行动作;<br />
+					break;
 					default:执行动作} </li>
 				<li>default:来规定匹配不存在时做的事情</li>
 				<!--Line:316-324-->
+				<li>计算条件表达式的值，若找到与之匹配的标签n，则执行该标签其后的动作，若都没有找到则执行default</li>
+				<li>标签可以为字符串或者数字，必须和条件表达式的值完全匹配</li>
+				<li>每个标签以冒号结束</li>
+				<li>break和default最好不要省略</li>
+				<li></li>
 			</ul>
-		<li>do..while语句，先执行一次代码，然后再检查条件是否为真，如果为真则重复这个循环</li>
+		<li>do..while语句，先执行一次代码，然后再判断是否为true，如果为true则重复这个循环，如果为false就退出循环</li>
 			<ul>
-				<li>语法：do{执行语句}while(条件)</li>
+				<li>语法：do{循环执行的语句块}while(条件表达式)</li>
+				<li>希望一个动作至少被执行一次</li>
+				<!--https://pic3.zhimg.com/v2-5c24f88d2ca6621324c302da9c138742_b.jpg-->
 			</ul>
 		<!--Line328-332-->
-		<li>while语句，先判断，再执行循环体</li>
+		<li>while语句，先判断是否为true，再执行循环体，如果判断为false就退出循环体</li>
 			<ul>
-				<li>while(条件){执行语句}</li>
+				<li>while(条件表达式){循环执行的语句块}</li>
+				<li>一个动作被重复执行到满足某个条件为止</li>
 			</ul>
 		<!--Line337-341-->
 		<li>for语句只要判断条件为true就会一直执行,直到判断条件为false</li>
 			<ul>
-				<li>for(声明变量和初始化；定义循环的条件，判断为true的执行规则){执行行为}</li>
+				<li>for(声明变量和初始化；定义循环的条件，递增递减计数器){循环执行的语句块}</li>
+				<li>将初始化变量和循环条件相比较，确定返回值，返回值为true执行循环体，执行递增递减计数器，将运算结果与循环条件相比较，值为true继续，值为false退出</li>
 				<li>for(这里的三个参数可以省略，但不能省略；号)</li>
+				<li>重复一个动作到一定次数</li>
 			</ul>
 		<!--Line346-348-->
 		<li>for in for/in 语句用于循环对象属性。循环中的代码每执行一次，就会对数组的元素或者对象的属性进行一次操作</li>
@@ -496,6 +522,11 @@
 		<!--Line:365-370-->
 		<li>continue;跳过当前条件，继续执行</li>
 		<!--Line:373-378-->
+		<li>return;终止函数体运行并返回一个值</li>
+		<li>throw;主动抛出异常</li>
+		<li>try;指明需要主动处理的代码块</li>
+		<li>catch;捕获异常</li>
+		<li>finally；后期处理</li>
 	</ul>
 	<ul>
 		<h2>函数</h2>
@@ -599,7 +630,7 @@
 					<td>查找是否有匹配的内容，有则以数组的形式返回字符串,没有返回null</td>
 				</tr>
 			</table>
-		<li>字符串的四个方法match(),replace(),search(),split()</li>
+		<li>字符串函数的四个方法match(),replace(),search(),split()</li>
 		<!--Line:722-743-->
 			<table>
 				<caption>正则在字符串中的四个方法</caption>
@@ -839,11 +870,11 @@
 					</tr>
 					<tr>
 						<td>验证邮政编码</td>
-						<td>/[0-9][1-9]{5}/</td>
+						<td>/^[0-9][1-9]{5}$/</td>
 					</tr>
 					<tr>
 						<td>验证文件名</td>
-						<td>/\w+\.zip|rar\7z/</td>
+						<td>^\w\-+\.(zip|rar|7z)$</td>
 					</tr>
 					<tr>
 						<td>删除多余空格</td>
@@ -855,12 +886,101 @@
 					</tr>
 					<tr>
 						<td>验证电子邮件</td>
-						<td>/^([\w\.\-]+)@([\w\-]+cn|com/</td>
+						<td>^([\w\.\-]+)@([\w\-]+)\.(cn|com)$</td>
 					</tr>
 				</table>
 			</ul>
 			<h2>function类型</h2>
-			<li>111</li>
+			<li>在ECMA中，function函数实际是对象</li>
+			<li>声明函数的三种方法复习</li>
+			<li>什么是构造函数？</li>
+			<!--http://www.cnblogs.com/mylove103104/p/4590715.html-->
+				<ul>
+					<p>主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中</p>
+					<p>例如：var request = new XMLHttpRequest();</p>
+					<p>那么我们可以清楚的看到 “new XMLHttpRequest();” 这句话就是一个标准的构造函数！我们 “var” 声明了一个 “request” 对象，用构造函数 “new XMLHttpRequest();” 来初始化这个 “request” 对象为它赋初始值。所以我们可以知道：“与 ‘new’ 运算符一起使用用来创建对象并初始化对象的‘函数’就是构造函数”。</p>
+				</ul>
+			<li>什么叫实例化对象？</li>
+			<ul>
+				<p>通常把用类创建对象的过程称为实例化,实例化对象就是创建对象的过程</p>
+			</ul>
+			<li>函数可以传递参数或传递返回值</li>
+			<li>函数的内部属性</li>
+				<ul>
+					<li>复习arguments Line:391</li>
+					<li>函数中的特殊对象arguments.callee()代表自己</li>
+					<li>函数中的特殊对象this</li>
+						<ul>
+							<li>window是一个对象，而且是JS里面最大的对象，是最外围的对象</li>
+							<li>如果用新的对象去包含属性，那么this就代表新的对象</li>
+							<li>函数的属性.length和.prototype</li>
+							<li>使用.apply和.call冒充函数扩大作用域？</li>
+						</ul>
+				</ul>
+	</ul>
+	<ul>
+	<h2>内存和作用域</h2>
+	<li>ECMA包含两种类型的值：基本类型和引用类型</li>
+	<li>五种基本类型是放在栈内存string,number,boolean,null,undefined</li>
+	<li>引用类型只有一种object，,object放在堆内存</li>
+		<table>
+			<caption>基本类型和引用类型的不同（有点复杂）</caption>
+			<tr>
+				<th>基本类型</th>
+				<th>引用类型</th>
+			</tr>
+			<tr>
+				<td>赋值方式：创建一个变量并赋值给它</td>
+				<td>赋值方式：创建一个变量并赋值给它</td>
+			</tr>
+			<tr>
+				<td>添加属性：不可以添加属性</td>
+				<td>添加属性：可以添加属性</td>
+			</tr>
+			<tr>
+				<td>复制变量值：复制的是值本身，两个变量操作互不影响</td>
+				<td>复制变量值：复制的是地址</td>
+			</tr>
+			<tr>
+				<td>函数传递参数：都是按照基本类型来传递的？</td>
+				<td>函数传递参数：不会按照引用来传递</td>
+			</tr>
+		</table>
+	<li>用instanceof检测数组的具体类型</li>
+	<li>函数是有作用域的，但是if语句花括号内是没有封闭作用域功能的，for语句也是没有的</li>
+	<li>作用域向上搜索原理</li>
+	<h2>包装类型</h2>
+	<li>三种基本类型（也是特殊的引用类型）String，Number，Boolean被称为基本包装类型</li>
+	<li>基本包装类型和引用类型都是可以使用内置的</li>
+	<li>Number的静态类型，是指不需要通过xxx.方法来使用的，可以直接用Number来使用</li>
+	<li>Number对象的方法</li>
+		<table>
+			<caption>Number对象的方法</caption>
+			<tr>
+				<th>名称</th>
+				<th>作用</th>
+			</tr>
+			<tr>
+				<td>toString()</td>
+				<td>把数值转换为字符串，还可以转换进制</td>
+			</tr>
+			<tr>
+				<td>toLocaleString()</td>
+				<td>根据本地格式转换字符串</td>
+			</tr>
+			<tr>
+				<td>toFixed()</td>
+				<td>保留小数点后指定位置并转换成字符串</td>
+			</tr>
+			<tr>
+				<td>toExponential()</td>
+				<td>以指数的方式转换为字符串，并保留小数点的指定位置</td>
+			</tr>
+			<tr>
+				<td>toPrecision()</td>
+				<td>以指数或点形式的方式转换为字符串，并保留小数点的指定位置</td>
+			</tr>
+		</table>
 	</ul>
 		<!--<p>ECMAscript-语法部分</p>
 		<p>文档对象模型-DOM</p>
