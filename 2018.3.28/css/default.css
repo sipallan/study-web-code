@@ -1,22 +1,23 @@
 *{padding:0;margin:0}
 
 img{
-	max-width:100%;
+	vertical-align: middle;
 }
 
+
 .wrap{
-	width:100%;
 	min-width:320px;
 	max-width:640px;
+	height:1000px;
 	margin:0 auto;
 	position:relative;
 }
 
-.download{
+img{
 	width:100%;
-	min-width:100px;
-	max-width:200px;
-	position:fixed;
-	left:30%;
-	bottom:3%;
+}
+.btn{
+	width:40%;
+	height:105px;
+	margin:-20% auto;
 }
