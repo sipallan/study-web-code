@@ -12,12 +12,11 @@ img{
 	position:relative;
 }
 
-.photo{
-	
-}
-
 .download{
 	width:100%;
 	min-width:100px;
 	max-width:200px;
+	position:fixed;
+	left:30%;
+	bottom:3%;
 }
