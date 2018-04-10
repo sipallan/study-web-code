@@ -1,0 +1,45 @@
+*{padding:0;margin:0}
+
+html{
+	font-size:50px;
+}
+
+html,body{
+	height:100%;
+}
+
+div{
+	height:100%;
+}
+
+@media (max-width: 640px) {
+	.bg{
+	height:100%;
+	min-width:6.4rem;
+	max-width:12.8rem;
+	margin:0 auto;
+	}
+    img{
+	width:100%;
+	height:100%;
+	min-width:6.4rem;
+	max-width:12.8rem;
+	vertical-align: middle;
+	}
+}
+
+@media (min-width: 640px){
+	.bg{
+	height:100%;
+	min-width:6.4rem;
+	max-width:12.8rem;
+	margin:0 auto;
+	}
+    img{
+	width:100%;
+	/*height:100%;*/
+	/*min-width:6.4rem;
+	max-width:12.8rem;*/
+	vertical-align: middle;
+	}
+}
