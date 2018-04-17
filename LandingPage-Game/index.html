@@ -11,7 +11,21 @@
 	</head>
 	<body>
 		<div class="bg">
-			<img src="img/xiguaLD2.jpg" alt="" />
+			<a id="link" href='javascript:alert("很抱歉，您的设备无法下载该应用。");'><img src="img/xiguaLD2.jpg" alt="" /></a>
 		</div>
 	</body>
+	<script>
+		!function(win, pageName){
+			var encode = encodeURIComponent
+			var mobSys = getMobSys(), href = [null, 'https://s.ixigua.com/oqGkr/', 'https://itunes.apple.com/cn/app/id1134496215?mt=8&ct=video-dqcm-sem'];
+			new Image().src = 'https://st.rylinkworld.com/log/sem/lpview?name='+encode(pageName)+'&os=' + mobSys + '&ua=' + encode(navigator.userAgent);
+			if(mobSys) document.querySelector('#link').href = href[mobSys];
+			function getMobSys() {
+				var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+				if (/android/i.test(userAgent)) return 1;
+				if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return 2;
+				return 0
+			}
+		}(window, 'xigua-game');
+	</script>
 </html>
